@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://djpablito12-commits.github.io/TecnoCrazy-SEO/sitemap.xml

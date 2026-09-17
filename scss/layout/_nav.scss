@@ -1,0 +1,85 @@
+```scss
+@use"../utilities/variables" as *;
+
+
+// ==============================
+// Animación de aparición del logo
+// ==============================
+
+@keyframes aparecer-logo {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+// ==============================
+// Menú de navegación
+// ==============================
+
+.menu-nav {
+    gap: $gap-large;
+
+    .nav-link {
+        color: $white;
+        font-weight: 500;
+        margin: 0 8px;
+        padding: 10px 15px;
+        border-radius: $border-radius;
+        transition: all $transition-fast;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $white;
+            transform: translateY(-3px);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .active {
+        background-color: $primary-color;
+        color: $white;
+    }
+}
+
+
+// ==============================
+// Logo
+// ==============================
+
+.logo {
+    img {
+        animation: aparecer-logo 0.8s ease-out;
+        transition: transform $transition-medium;
+
+        &:hover {
+            transform: scale(1.08) rotate(2deg);
+        }
+    }
+}
+
+
+// ==============================
+// Navbar
+// ==============================
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.45) !important;
+    border-radius: $border-radius-navbar;
+    margin: 15px auto;
+    width: 90%;
+
+    .nav-link {
+        color: $white !important;
+    }
+
+    .navbar-brand {
+        color: $white !important;
+    }
+}

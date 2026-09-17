@@ -1,0 +1,41 @@
+@use "../utilities/variables" as *;
+
+.btn {
+    padding: .8rem 2rem;
+    border: none;
+    border-radius: $border-radius-button;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        opacity: .9;
+    }
+}
+
+.btn-primary {
+    @extend .btn;
+
+    background-color: $btn-primary-color;
+    color: $white;
+}
+
+.btn-secondary {
+    @extend .btn;
+
+    background-color: $btn-secondary-color;
+    color: $white;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: $gap-small;
+    margin-top: $gap-small;
+}
+
+@media (min-width: 768px) {
+    .botones {
+        justify-content: flex-start;
+    }
+}

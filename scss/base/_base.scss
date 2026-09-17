@@ -1,0 +1,44 @@
+@use "../utilities/variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-primary;
+    background-color: $bg-light;
+    color: $text-color;
+    text-align: center;
+}
+
+figcaption {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+main {
+    h2,
+    p,
+    li {
+        color: $text-color;
+    }
+}
+
+.titulo-principal {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 30px auto;
+  line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+  .titulo-principal {
+    font-size: 2rem;
+  }
+}

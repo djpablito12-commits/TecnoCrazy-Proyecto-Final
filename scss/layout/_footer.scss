@@ -1,0 +1,79 @@
+@use "../utilities/variables" as *;
+
+footer {
+    background-color: $secondary-color;
+    color: $white;
+    text-align: center;
+    font-size: 25px;
+
+    a {
+        color: $white;
+        text-decoration: none;
+
+        transition: all $transition-fast;
+
+        &:hover {
+            opacity: .8;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+.piepagina {
+    grid-area: footer;
+    background-color: $secondary-color;
+    background-image: url(../assets/baner-footer-final.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $white;
+    min-height: 350px;
+}
+
+.contenedorfooter {
+    width: 90%;
+    max-width: 900px;
+    min-height: 250px;
+    margin: 0 auto;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $gap-medium;
+}
+
+.menuredes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $gap-medium;
+    list-style: none;
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+/* MEDIA QUERIES DEL FOOTER */
+
+@media (min-width: 768px) {
+
+    .botones {
+        justify-content: flex-start;
+    }
+
+    .contenedorfooter {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .piepagina {
+        padding: 2rem 0;
+    }
+}

@@ -1,0 +1,50 @@
+// Colores principales
+
+$primary-color: #1F66FF;
+$secondary-color: #262626;
+$bg-light: #F2F2F2;
+$text-color: #333333;
+$white: #FFFFFF;
+
+
+// Colores de botones
+
+$btn-primary-color: #200081;
+$btn-secondary-color: #2b19c7;
+
+
+// Tipografía
+
+$font-primary: "Poppins", sans-serif;
+
+
+// Bordes
+
+$border-radius: 8px;
+$border-radius-card: 15px;
+$border-radius-navbar: 10px;
+$border-radius-button: 50px;
+
+
+// Sombras
+
+$shadow-card: 0 10px 20px rgba(0, 0, 0, 0.25);
+$shadow-grid: 0 8px 12px rgba(0, 0, 0, 0.3);
+
+
+// Transiciones
+
+$transition-fast: 0.3s ease;
+$transition-medium: 0.4s ease;
+
+
+// Espaciados
+
+$gap-small: 1rem;
+$gap-medium: 20px;
+$gap-large: 30px;
+
+
+// OPERADOR SCSS
+
+$container-width: 90% - 5%;

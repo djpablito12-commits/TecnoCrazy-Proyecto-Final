@@ -1,0 +1,117 @@
+@use "../utilities/variables" as *;
+
+/*====================================
+GRID PRINCIPAL
+=====================================*/
+
+.bigcontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    gap: 2rem;
+}
+
+.encabezado {
+    grid-area: header;
+}
+
+.contenedormain {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*====================================
+CONTENIDO PRINCIPAL
+=====================================*/
+
+.main1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $gap-medium;
+}
+
+
+/*====================================
+GRID ACCESORIOS
+=====================================*/
+
+.main2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $gap-medium;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, .3);
+}
+
+
+/*====================================
+GRID REPUESTOS
+=====================================*/
+
+.main3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $gap-medium;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: 0 8px 12px rgba(255, 255, 255, .1);
+}
+
+
+/*====================================
+PROGRAMACIÓN
+=====================================*/
+
+.main-programacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $gap-medium;
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem;
+}
+
+
+/*====================================
+MEDIA QUERY TABLET
+=====================================*/
+
+@media (min-width: 768px) {
+
+    .main1 {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .main2,
+    .main3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/*====================================
+MEDIA QUERY DESKTOP
+=====================================*/
+
+@media (min-width: 1024px) {
+
+    .main2,
+    .main3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main-programacion {
+        flex-direction: row;
+        justify-content: center;
+    }
+}

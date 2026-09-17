@@ -1,0 +1,431 @@
+@charset "UTF-8";
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+footer {
+  font-size: 25px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #F2F2F2;
+  color: #333333;
+  text-align: center;
+}
+
+
+.titulo-principal {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 30px auto;
+  line-height: 1.2;
+}
+
+figcaption {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main h2,
+main p,
+main li {
+  color: #333333;
+}
+
+.encabezado {
+  grid-area: header;
+  background-color: #262626;
+  color: #FFFFFF;
+  background-image: url(../assets/tecnocrazy-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+.carousel-item {
+  height: 250px;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    height: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  .carousel-item {
+    height: 550px;
+  }
+}
+.menu-nav {
+  gap: 30px;
+}
+.menu-nav .nav-link {
+  color: #FFFFFF;
+  font-weight: 500;
+  margin: 0 8px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.menu-nav .nav-link:hover {
+  background-color: #1F66FF;
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.menu-nav .active {
+  background-color: #1F66FF;
+  color: #FFFFFF;
+}
+
+.logo img {
+  transition: transform 0.4s ease;
+}
+.logo img:hover {
+  transform: scale(1.08) rotate(2deg);
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.45) !important;
+  border-radius: 10px;
+  margin: 15px auto;
+  width: 90%;
+}
+.navbar .nav-link {
+  color: #FFFFFF !important;
+}
+.navbar .navbar-brand {
+  color: #FFFFFF !important;
+}
+
+footer {
+  background-color: #262626;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 25px;
+}
+footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.piepagina {
+  grid-area: footer;
+  background-color: #262626;
+  background-image: url(../assets/baner-footer-final.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+  min-height: 350px;
+}
+
+.contenedorfooter {
+  width: 90%;
+  max-width: 900px;
+  min-height: 250px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menuredes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+.menuredes a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* MEDIA QUERIES DEL FOOTER */
+@media (min-width: 768px) {
+  .botones {
+    justify-content: flex-start;
+  }
+  .contenedorfooter {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .piepagina {
+    padding: 2rem 0;
+  }
+}
+/*====================================
+GRID PRINCIPAL
+=====================================*/
+.bigcontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
+  gap: 2rem;
+}
+
+.contenedormain {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*====================================
+GRID ACCESORIOS
+=====================================*/
+.main2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "acc1" "acc2" "acc3";
+  gap: 20px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+.main2 > div {
+  width: 100%;
+}
+
+.acc1 {
+  grid-area: acc1;
+}
+
+.acc2 {
+  grid-area: acc2;
+}
+
+.acc3 {
+  grid-area: acc3;
+}
+
+/*====================================
+GRID REPUESTOS
+=====================================*/
+.main3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "rep1" "rep2" "rep3";
+  gap: 20px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+.main3 > div {
+  width: 100%;
+}
+
+/*====================================
+PROGRAMACIÓN
+=====================================*/
+.main-programacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+/*====================================
+MEDIA 
+=====================================*/
+@media (min-width: 768px) {
+  .main1 {
+    flex-direction: row;
+  }
+  .main2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "acc1 acc2" "acc3 acc3";
+  }
+  .main3 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "rep1 rep2" "rep3 rep3";
+  }
+}
+@media (min-width: 1024px) {
+  .main2 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "acc1 acc2 acc3";
+  }
+  .main3 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "rep1 rep2 rep3";
+  }
+  .main-programacion {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background-color: #200081;
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background-color: #2b19c7;
+  color: #FFFFFF;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .botones {
+    justify-content: flex-start;
+  }
+}
+/* IMÁGENES DE CATEGORÍAS */
+.fotoaccesorios,
+.fotorepuesto {
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.fotoaccesorios:hover,
+.fotorepuesto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.fotoaccesorios,
+.fotorepuesto {
+  width: 100%;
+  padding: 20px;
+}
+
+.fotoaccesorios img,
+.fotorepuesto img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.main3 img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  padding: 20px;
+}
+
+/*====================================
+FORMULARIO DE CONTACTO
+=====================================*/
+.caja-consultas {
+  background-color: #262626;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 6rem;
+  border-radius: 8px;
+}
+.caja-consultas h2 {
+  color: #FFFFFF;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #FFFFFF;
+}
+.form-group input,
+.form-group textarea {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  color: #333333;
+  font-family: inherit;
+}
+.form-group textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+@media (min-width: 1024px) {
+  .caja-consultas {
+    max-width: 900px;
+  }
+}
+/* -------- EFECTOS MENU NAVBAR -------- */
+.menu-nav .nav-link {
+  color: white;
+  font-weight: 500;
+  margin: 0 8px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+@media (max-width: 767px) {
+  .titulo-principal {
+    font-size: 2rem;
+  }
+}
