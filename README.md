@@ -1,28 +1,30 @@
 ﻿# TecnoCrazy 🚀💻
 
-## Descripción del proyecto
+## Proyecto Final — Desarrollo Web
 
-TecnoCrazy es un sitio web desarrollado como proyecto final para el curso de Desarrollo Web de Coderhouse.
+TecnoCrazy es un sitio web desarrollado como Proyecto Final para el curso de Desarrollo Web de Coderhouse.
 
-El objetivo del proyecto es crear un sitio web para un emprendimiento tecnológico enfocado en la reparación de dispositivos electrónicos, venta de accesorios para celulares y desarrollo de soluciones digitales.
+El proyecto representa un emprendimiento tecnológico enfocado en la reparación de dispositivos electrónicos, venta de accesorios para celulares y desarrollo de soluciones digitales.
 
-El proyecto busca combinar tecnología, diseño y funcionalidad, aplicando los conocimientos adquiridos durante el curso y utilizando HTML5, SCSS, Bootstrap y herramientas de desarrollo frontend.
+El objetivo es combinar tecnología, diseño y funcionalidad aplicando los conocimientos adquiridos durante el curso mediante HTML5, SCSS/SASS, Bootstrap, diseño responsive, animaciones y optimización SEO.
 
 ---
 
 # Tecnologías utilizadas
 
-* HTML5
-* SCSS / SASS
-* CSS3
-* Bootstrap 5
-* JavaScript
-* AOS (Animate On Scroll)
-* Flexbox
-* Google Fonts
-* Diseño responsive
-* Git
-* GitHub
+- HTML5
+- SCSS / SASS
+- CSS3
+- Bootstrap 5
+- JavaScript
+- AOS (Animate On Scroll)
+- Flexbox
+- CSS Grid
+- Google Fonts
+- Git
+- GitHub
+- Diseño responsive
+- SEO
 
 ---
 
@@ -46,8 +48,9 @@ TecnoCrazy/
 │   ├── utilities/
 │   └── main.scss
 │
-├── css/
-│   └── style.css
+├── styles/
+│   ├── style.css
+│   └── style.css.map
 │
 ├── assets/
 │
@@ -56,81 +59,113 @@ TecnoCrazy/
 └── README.md
 ```
 
+El proyecto cuenta con `index.html` en la raíz y cuatro páginas adicionales dentro de la carpeta `pages/`, respetando la estructura solicitada para el Proyecto Final.
+
+Todos los recursos multimedia se encuentran organizados dentro de la carpeta `assets/`.
+
+Los archivos fuente de estilos se encuentran en `scss/` y el CSS compilado se encuentra en `styles/`.
+
 ---
 
 # Páginas del proyecto
 
-## Página principal — index.html
+## Inicio — index.html
 
-En la página de inicio se presenta la identidad de TecnoCrazy.
-
-Elementos implementados:
-
-* Barra de navegación responsive.
-* Logo de TecnoCrazy.
-* Presentación general del emprendimiento.
-* Carrusel de imágenes mediante Bootstrap.
-* Sección de accesorios para celulares.
-* Sección de repuestos y herramientas.
-* Sección dedicada a programación y desarrollo web.
-* Animaciones y efectos visuales.
-* Footer con información de contacto y redes sociales.
-
----
-
-## Página Productos — productos.html
-
-En esta sección se presentan diferentes productos relacionados con tecnología.
+La página principal presenta la identidad y los principales servicios de TecnoCrazy.
 
 Elementos implementados:
 
-* Tarjetas de productos.
-* Imágenes descriptivas.
-* Nombre y precio de los productos.
-* Organización del contenido mediante Flexbox.
-* Efectos hover y transiciones.
-* Diseño adaptable a dispositivos móviles.
+- Navbar responsive de Bootstrap.
+- Menú hamburguesa para dispositivos móviles.
+- Logo e identidad visual de TecnoCrazy.
+- Banner principal.
+- Presentación general del emprendimiento.
+- Carrusel de imágenes mediante Bootstrap.
+- Sección de accesorios para celulares.
+- Sección de repuestos y herramientas.
+- Sección de programación y desarrollo web.
+- Animaciones y efectos visuales.
+- Footer personalizado.
+- Accesos directos a las diferentes páginas.
+- Accesos a redes sociales.
 
 ---
 
-## Página Proyectos — proyectos.html
+## Productos — productos.html
 
-En esta página se presentan proyectos y servicios relacionados con:
+Esta sección presenta productos y accesorios relacionados con tecnología.
 
-* Desarrollo de páginas web.
-* Soluciones digitales.
-* Reparación tecnológica.
-* Servicios relacionados con tecnología.
+Elementos implementados:
 
-Se aplicaron estilos personalizados, animaciones y una estructura responsive para mejorar la presentación visual.
+- Tarjetas de productos.
+- Imágenes descriptivas.
+- Nombre y precio de los productos.
+- Organización responsive del contenido.
+- Flexbox y CSS Grid.
+- Efectos hover.
+- Transiciones.
+- Diseño adaptable a diferentes dispositivos.
 
 ---
 
-## Página Sobre mí — sobremi.html
+## Proyectos — proyectos.html
 
-Esta sección contiene información personal y profesional del desarrollador.
+En esta página se presentan proyectos y servicios relacionados con TecnoCrazy.
+
+Incluye contenido relacionado con:
+
+- Desarrollo de páginas web.
+- Soluciones digitales.
+- Reparación tecnológica.
+- Servicios relacionados con tecnología.
+
+Se aplicaron estilos personalizados, componentes responsive y animaciones para mejorar la presentación del contenido.
+
+---
+
+## Sobre mí — sobremi.html
+
+Esta sección presenta información sobre el desarrollador del proyecto.
 
 Incluye:
 
-* Presentación de Pablo Cepeda.
-* Formación en programación.
-* Interés por la tecnología.
-* Experiencia en reparación de dispositivos electrónicos.
-* Información relacionada con el desarrollo web.
+- Presentación de Pablo Cepeda.
+- Formación relacionada con programación.
+- Interés por la tecnología.
+- Experiencia relacionada con reparación de dispositivos.
+- Desarrollo web y soluciones digitales.
 
 ---
 
-## Página Contacto — contacto.html
+## Contacto — contacto.html
 
 Página destinada a facilitar la comunicación con los usuarios.
 
 Elementos implementados:
 
-* Formulario de contacto.
-* Campos para completar datos.
-* Botones de envío.
-* Información de contacto.
-* Diseño responsive.
+- Formulario de contacto.
+- Campos para completar datos.
+- Botones personalizados.
+- Información de contacto.
+- Diseño responsive.
+- Componentes estilizados mediante SCSS y Bootstrap.
+
+---
+
+# HTML semántico
+
+Los cinco archivos HTML utilizan etiquetas semánticas para organizar correctamente el contenido.
+
+Entre las etiquetas utilizadas se encuentran:
+
+- `<header>`
+- `<nav>`
+- `<main>`
+- `<section>`
+- `<article>`
+- `<footer>`
+
+La estructura del código mantiene una jerarquía organizada para facilitar la lectura y el mantenimiento del proyecto.
 
 ---
 
@@ -138,192 +173,270 @@ Elementos implementados:
 
 Los estilos del proyecto fueron desarrollados utilizando SCSS/SASS.
 
-El código se organizó mediante archivos parciales para mantener una estructura ordenada y facilitar el mantenimiento del proyecto.
+El código fue dividido mediante partials para mantener una arquitectura organizada y facilitar el mantenimiento.
 
-Se aplicaron diferentes recursos de SCSS:
+La estructura SCSS se divide principalmente en:
 
-* Variables.
-* Nesting.
-* Mixins.
-* Mixins con parámetros.
-* `@extend`.
-* Organización mediante partials.
-* Transformaciones.
-* Transiciones.
-* Animaciones.
-* Efectos hover.
-* Sombras.
-* Media queries.
+```text
+scss/
+├── base/
+├── components/
+├── layout/
+├── utilities/
+└── main.scss
+```
 
-El archivo `main.scss` funciona como archivo principal para importar los diferentes partials del proyecto.
+Durante el desarrollo se utilizaron:
 
----
+- Variables.
+- Nesting.
+- Mixins.
+- Mixins con parámetros.
+- `@extend`.
+- Partials.
+- `@use`.
+- Transformaciones.
+- Transiciones.
+- Animaciones.
+- Efectos hover.
+- Sombras.
+- Media queries.
 
-# Animaciones
+El archivo `main.scss` se utiliza exclusivamente para cargar los diferentes partials mediante `@use`.
 
-Se incorporaron animaciones para mejorar la experiencia visual y la interactividad del sitio.
+El resultado de la compilación se encuentra dentro de:
 
-Se utilizaron recursos de CSS/SCSS como:
-
-* `transition`
-* `transform`
-* `@keyframes`
-* Efectos `hover`
-* Animaciones de entrada
-
-Las animaciones fueron utilizadas de manera sutil para mantener una experiencia visual agradable sin afectar la navegación.
-
----
-
-# Librería de animaciones — AOS
-
-El proyecto incorpora la librería **AOS (Animate On Scroll)** para generar animaciones cuando determinados elementos aparecen durante el desplazamiento de la página.
-
-La implementación de AOS permite incorporar efectos de entrada a diferentes elementos visuales del sitio.
-
-El objetivo es mejorar la interacción y presentación del contenido manteniendo las animaciones de forma moderada.
+```text
+styles/style.css
+```
 
 ---
 
 # Diseño responsive
 
-El sitio fue desarrollado para adaptarse a diferentes tamaños de pantalla.
+TecnoCrazy fue desarrollado para adaptarse a diferentes tamaños de pantalla.
 
-Se trabajó principalmente con:
+Se trabajó específicamente para:
 
-* Diseño desktop.
-* Diseño mobile.
-* Media queries.
-* Flexbox.
-* Componentes responsive de Bootstrap.
-* Navbar adaptable.
-* Organización flexible de tarjetas y secciones.
-* Ajustes de tamaños, espacios y tipografías según el dispositivo.
+- Mobile.
+- Tablet.
+- Desktop.
 
-La responsividad fue aplicada a las cinco páginas HTML del proyecto:
+Para lograrlo se utilizaron:
 
-* `index.html`
-* `productos.html`
-* `proyectos.html`
-* `contacto.html`
-* `sobremi.html`
+- Media queries.
+- Flexbox.
+- CSS Grid.
+- Componentes responsive de Bootstrap.
+- Navbar adaptable.
+- Menú hamburguesa.
+- Imágenes adaptables.
+- Tarjetas flexibles.
+- Ajustes de tipografía.
+- Ajustes de márgenes y espacios.
+
+La responsividad fue aplicada a las cinco páginas:
+
+- `index.html`
+- `productos.html`
+- `proyectos.html`
+- `contacto.html`
+- `sobremi.html`
+
+El objetivo fue evitar scroll horizontal, superposición de elementos y deformación del contenido en diferentes dispositivos.
 
 ---
 
-# Bootstrap implementado
+# Bootstrap
 
 Bootstrap 5 fue utilizado para complementar el desarrollo del sitio.
 
-Se implementaron componentes y recursos como:
+Entre los recursos implementados se encuentran:
 
-* Navbar responsive.
-* Menú hamburguesa para dispositivos móviles.
-* Carrusel de imágenes.
-* Sistema de grillas.
-* Clases utilitarias.
-* Componentes responsive.
+- Navbar responsive.
+- Menú hamburguesa.
+- Carrusel de imágenes.
+- Sistema de grillas.
+- Contenedores.
+- Clases utilitarias.
+- Botones.
+- Componentes responsive.
 
-Los estilos personalizados mediante SCSS se combinaron con Bootstrap para adaptar el framework a la identidad visual de TecnoCrazy.
+La navbar está presente en las diferentes páginas del proyecto y fue personalizada mediante SCSS para mantener la identidad visual de TecnoCrazy.
 
 ---
 
-# Diseño y estilos
+# Animaciones
 
-Para la identidad visual del proyecto se utilizó una estética tecnológica basada principalmente en tonos azules, negros, grises y blancos.
+El proyecto incorpora animaciones nativas realizadas mediante CSS/SCSS.
+
+Se utilizaron recursos como:
+
+- `transition`
+- `transform`
+- `@keyframes`
+- Efectos `hover`
+- Animaciones de entrada
+
+Las animaciones se aplicaron de manera moderada para mejorar la interacción sin afectar la navegación.
+
+---
+
+# Librería de animaciones — AOS
+
+El proyecto incorpora la librería AOS (Animate On Scroll).
+
+AOS permite ejecutar animaciones cuando determinados elementos aparecen durante el desplazamiento de la página.
+
+Esta librería se combina con las animaciones propias desarrolladas mediante SCSS para mejorar la experiencia visual del sitio.
+
+---
+
+# Footer interactivo
+
+El proyecto cuenta con un footer personalizado con la identidad visual de TecnoCrazy.
+
+El footer incluye accesos directos a:
+
+- Inicio.
+- Sobre mí.
+- Productos/Servicios.
+- Proyectos.
+- Contacto.
+
+También incorpora accesos a redes sociales y medios de comunicación.
+
+Los enlaces permiten navegar directamente entre las diferentes secciones del sitio.
+
+El footer fue adaptado para visualizarse correctamente en diferentes tamaños de pantalla.
+
+---
+
+# SEO
+
+El proyecto incorpora optimizaciones básicas de SEO y accesibilidad.
+
+Cada página cuenta con elementos orientados a mejorar su identificación y posicionamiento:
+
+- `<title>` descriptivo.
+- Meta description.
+- Meta keywords.
+- Atributos `alt` en las imágenes.
+- Jerarquía de encabezados.
+- HTML semántico.
+- Enlaces internos.
+- Nombres descriptivos en archivos multimedia.
+- Archivo `robots.txt`.
+- Archivo `sitemap.xml`.
+- Etiquetas canonical.
+
+El contenido está orientado a TecnoCrazy y a sus servicios tecnológicos.
+
+---
+
+# Identidad visual
+
+La identidad visual de TecnoCrazy utiliza principalmente tonos azules, negros, grises y blancos.
 
 Paleta principal:
 
-* Azul principal: `#1F66FF`
-* Negro/gris oscuro: `#262626`
-* Fondo claro: `#F2F2F2`
-* Texto: `#333333`
-* Blanco: `#FFFFFF`
+- Azul principal: `#1F66FF`
+- Negro/gris oscuro: `#262626`
+- Fondo claro: `#F2F2F2`
+- Texto: `#333333`
+- Blanco: `#FFFFFF`
 
-Se aplicaron diferentes recursos visuales:
+También se utilizaron:
 
-* Variables.
-* Transiciones.
-* Efectos hover.
-* Sombras.
-* Transformaciones.
-* Animaciones.
-* Diseño responsive.
-* Componentes de Bootstrap.
+- Sombras.
+- Bordes.
+- Transformaciones.
+- Animaciones.
+- Efectos hover.
+- Transiciones.
+- Imágenes tecnológicas.
+- Componentes personalizados.
 
 ---
 
 # Funcionalidades
 
-El sitio web cuenta con:
+El sitio cuenta con:
 
-* Navegación entre las diferentes páginas.
-* Visualización de productos y accesorios tecnológicos.
-* Carrusel de imágenes.
-* Formulario de contacto.
-* Diseño adaptable a dispositivos móviles.
-* Presentación de proyectos y servicios.
-* Información sobre el desarrollador.
-* Animaciones CSS/SCSS.
-* Animaciones mediante AOS.
-* Componentes responsive de Bootstrap.
+- Navegación entre cinco páginas.
+- Navbar responsive.
+- Menú hamburguesa.
+- Carrusel Bootstrap.
+- Visualización de productos.
+- Presentación de servicios.
+- Formulario de contacto.
+- Presentación del desarrollador.
+- Animaciones SCSS.
+- Animaciones mediante AOS.
+- Footer interactivo.
+- Accesos directos entre páginas.
+- Enlaces a redes sociales.
+- Diseño responsive.
+- Optimización SEO.
 
 ---
 
-# Objetivo de la tercera pre-entrega
+# Objetivo del Proyecto Final
 
-Esta etapa del proyecto tuvo como objetivo finalizar el diseño del sitio y mejorar su funcionamiento en dispositivos desktop y mobile.
+El Proyecto Final de TecnoCrazy integra los contenidos desarrollados durante el curso de Desarrollo Web.
 
 Los principales objetivos fueron:
 
-* Finalizar la responsividad de las cinco páginas HTML.
-* Incorporar animaciones locales.
-* Implementar una librería de animaciones.
-* Profundizar el uso de SCSS.
-* Utilizar variables y nesting.
-* Implementar mixins con parámetros.
-* Aplicar `@extend`.
-* Organizar los estilos mediante partials.
-* Mantener una estructura HTML limpia y ordenada.
-* Mejorar la experiencia visual e interacción del usuario.
+- Desarrollar cinco páginas HTML.
+- Utilizar HTML semántico.
+- Implementar Bootstrap.
+- Desarrollar una navbar responsive.
+- Trabajar los estilos mediante SCSS.
+- Organizar SCSS mediante partials.
+- Implementar variables.
+- Utilizar nesting.
+- Crear mixins con parámetros.
+- Aplicar `@extend`.
+- Utilizar `@use`.
+- Incorporar animaciones nativas.
+- Incorporar la librería AOS.
+- Desarrollar un sitio completamente responsive.
+- Optimizar el SEO.
+- Organizar correctamente los recursos multimedia.
+- Utilizar Git y GitHub para control de versiones.
+- Publicar el proyecto mediante Vercel o Netlify.
 
 ---
 
 # Cómo visualizar el proyecto
 
-Para visualizar el sitio web:
+Para visualizar TecnoCrazy localmente:
 
 1. Clonar o descargar el repositorio.
 2. Abrir la carpeta del proyecto.
 3. Abrir el proyecto con Visual Studio Code.
-4. Ejecutar `index.html` utilizando Live Server.
+4. Abrir `index.html`.
+5. Se recomienda utilizar Live Server para visualizar el sitio durante el desarrollo.
 
-También es posible abrir directamente `index.html` en un navegador web, aunque se recomienda utilizar Live Server para una mejor experiencia de desarrollo.
+---
+
+# Sitio publicado
+
+El Proyecto Final será desplegado públicamente mediante Vercel o Netlify.
+
+**Link del sitio:** pendiente de publicación.
+
+Cuando se realice el deploy definitivo, este enlace será actualizado con la URL pública del sitio.
 
 ---
 
-# Repositorio
+# Repositorio GitHub
 
-El proyecto se encuentra alojado en GitHub en un repositorio público.
+El código fuente del Proyecto Final se encuentra alojado en un repositorio público de GitHub.
 
-Desde allí se puede acceder al código fuente, estructura de carpetas, archivos HTML, SCSS, CSS, imágenes y documentación del proyecto.
+**Link del repositorio:** pendiente de publicación.
 
-## SEO básico
-
-El proyecto incorpora mejoras básicas de posicionamiento y accesibilidad:
-
-* Etiquetas `title` específicas para cada página.
-* Meta descriptions y meta keywords.
-* Jerarquía semántica de encabezados con un `h1` visible por página.
-* Enlaces canonical.
-* Textos `alt` descriptivos en las imágenes.
-* Nombres de archivos de imágenes más descriptivos.
-* Archivo `robots.txt`.
-* Archivo `sitemap.xml`.
-* Referencias de contenido orientadas a TecnoCrazy y a Santa Fe, Argentina.
-
-> Nota: si el sitio se publica en un dominio diferente al configurado en `sitemap.xml`, se debe actualizar allí la URL base de las páginas.
-
----
+El repositorio contiene el código HTML, la arquitectura SCSS, el CSS compilado, los recursos multimedia y la documentación del proyecto.
 
 ---
 
@@ -331,6 +444,6 @@ El proyecto incorpora mejoras básicas de posicionamiento y accesibilidad:
 
 **Pablo Cepeda**
 
-Proyecto realizado para el curso de Desarrollo Web — Coderhouse.
+Proyecto Final realizado para el curso de Desarrollo Web — Coderhouse.
 
 **Año: 2026**
