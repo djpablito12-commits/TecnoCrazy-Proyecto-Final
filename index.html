@@ -21,12 +21,13 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="canonical" href="index.html">
+
+    <!-- Canonical: agregar la URL absoluta cuando se publique el sitio. -->
 </head>
 
-<body>
+<body id="top">
 
-    <section class="bigcontainer">
+    <div class="bigcontainer">
 
         <!-- HEADER -->
         <header class="encabezado"> 
@@ -88,12 +89,6 @@
                 <figcaption>Logo de TecnoCrazy</figcaption>
 
             </figure>
-
-            <p>
-                En TecnoCrazy, combinamos la pasión por la tecnología con soluciones locas:
-                reparamos tus electrodomésticos y creamos aplicaciones y sitios web a medida,
-                todo con un enfoque Full Stack.
-            </p>
 
         </header>
 
@@ -360,59 +355,30 @@
         </main>
 
         <!-- FOOTER -->
-        <footer class="piepagina">
+        <footer class="piepagina footer-grafico" aria-label="Pie de página TecnoCrazy">
+            <div class="footer-imagen-wrap">
+                <img src="assets/footer-diseno.png" alt="TecnoCrazy: navegación, servicios, contacto y redes sociales" class="footer-imagen">
 
-            <div class="contenedorfooter">
-
-                <figure>
-
-                    <img src="assets/redes-imagen-footer.png"
-                        alt="Redes sociales y contacto de TecnoCrazy">
-
-                    <figcaption>
-                        Imagen redes footer
-                    </figcaption>
-
-                </figure>
-
-                <nav>
-
-                    <ul class="menuredes">
-
-                        <li>
-                            <a href="https://www.instagram.com/"
-                                target="_blank">
-                                Instagram
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.facebook.com/"
-                                target="_blank">
-                                Facebook
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://web.whatsapp.com"
-                                target="_blank">
-                                Tel: 3424067140
-                            </a>
-                        </li>
-
-                    </ul>
-
+                <nav class="footer-hotspots footer-nav-hotspots" aria-label="Enlaces rápidos del pie de página">
+                    <a class="hotspot nav-inicio" href="index.html" aria-label="Ir a Inicio" title="Inicio"></a>
+                    <a class="hotspot nav-sobremi" href="pages/sobremi.html" aria-label="Ir a Sobre mí" title="Sobre mí"></a>
+                    <a class="hotspot nav-servicios" href="pages/productos.html" aria-label="Ir a Productos y servicios" title="Servicios"></a>
+                    <a class="hotspot nav-proyectos" href="pages/proyectos.html" aria-label="Ir a Proyectos" title="Proyectos"></a>
+                    <a class="hotspot nav-contacto" href="pages/contacto.html" aria-label="Ir a Contacto" title="Contacto"></a>
                 </nav>
 
+                <div class="footer-hotspots footer-social-hotspots" aria-label="Redes sociales de TecnoCrazy">
+
+
+
+                    <a class="hotspot contacto-whatsapp" href="https://wa.me/543424067140" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" title="WhatsApp"></a>
+                </div>
+
+                <a class="hotspot volver-arriba-grafico" href="#top" aria-label="Volver arriba" title="Volver arriba"></a>
             </div>
-
-            <p>
-                &copy; 2026 TecnoCrazy. Todos los derechos reservados.
-            </p>
-
         </footer>
 
-    </section>
+    </div>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

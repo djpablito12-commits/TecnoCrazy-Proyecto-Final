@@ -83,3 +83,9 @@ MEDIA QUERY DESKTOP
         padding: 6rem;
     }
 }
+// Texto del contacto por correo (sin formulario que no pueda enviar).
+.caja-consultas .contacto-descripcion {
+    color: $white;
+    line-height: 1.6;
+    margin: 1rem 0 1.5rem;
+}

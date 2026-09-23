@@ -25,12 +25,13 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="canonical" href="proyectos.html">
+
+    <!-- Canonical: agregar la URL absoluta cuando se publique el sitio. -->
 </head>
 
-<body>
+<body id="top">
 
-     <div class="bigcontainer">
+    <div class="bigcontainer">
 
         <!-- HEADER -->
 
@@ -109,12 +110,6 @@
                 </figcaption>
 
             </figure>
-
-            <p>
-                En TecnoCrazy, combinamos la pasión por la tecnología con soluciones locas:
-                reparamos tus electrodomésticos y creamos aplicaciones y sitios web a medida,
-                todo con un enfoque Full Stack.
-            </p>
 
         </header>
 
@@ -317,7 +312,7 @@
 
                     </div>
 
-               </div>
+                </section>
 
             </div>
 
@@ -325,64 +320,30 @@
 
 
         <!-- FOOTER -->
+        <footer class="piepagina footer-grafico" aria-label="Pie de página TecnoCrazy">
+            <div class="footer-imagen-wrap">
+                <img src="../assets/footer-diseno.png" alt="TecnoCrazy: navegación, servicios, contacto y redes sociales" class="footer-imagen">
 
-        <footer class="piepagina">
-
-            <div class="contenedorfooter">
-
-                <figure>
-
-                    <img src="../assets/redes-imagen-footer.png"
-                        alt="Redes sociales y contacto de TecnoCrazy">
-
-                    <figcaption>
-                        Redes sociales de TecnoCrazy
-                    </figcaption>
-
-                </figure>
-
-
-                <nav aria-label="Redes sociales">
-
-                    <ul class="menuredes">
-
-                        <li>
-                            <a href="https://www.instagram.com/"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Instagram
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.facebook.com/"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Facebook
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://web.whatsapp.com"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Tel: 3424067140
-                            </a>
-                        </li>
-
-                    </ul>
-
+                <nav class="footer-hotspots footer-nav-hotspots" aria-label="Enlaces rápidos del pie de página">
+                    <a class="hotspot nav-inicio" href="../index.html" aria-label="Ir a Inicio" title="Inicio"></a>
+                    <a class="hotspot nav-sobremi" href="../pages/sobremi.html" aria-label="Ir a Sobre mí" title="Sobre mí"></a>
+                    <a class="hotspot nav-servicios" href="../pages/productos.html" aria-label="Ir a Productos y servicios" title="Servicios"></a>
+                    <a class="hotspot nav-proyectos" href="../pages/proyectos.html" aria-label="Ir a Proyectos" title="Proyectos"></a>
+                    <a class="hotspot nav-contacto" href="../pages/contacto.html" aria-label="Ir a Contacto" title="Contacto"></a>
                 </nav>
 
+                <div class="footer-hotspots footer-social-hotspots" aria-label="Redes sociales de TecnoCrazy">
+
+
+
+                    <a class="hotspot contacto-whatsapp" href="https://wa.me/543424067140" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" title="WhatsApp"></a>
+                </div>
+
+                <a class="hotspot volver-arriba-grafico" href="#top" aria-label="Volver arriba" title="Volver arriba"></a>
             </div>
-
-            <p>
-                &copy; 2026 TecnoCrazy. Todos los derechos reservados.
-            </p>
-
         </footer>
 
-    </section>
+    </div>
 
 
     <!-- Bootstrap JS -->

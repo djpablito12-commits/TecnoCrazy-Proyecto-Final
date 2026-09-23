@@ -2,78 +2,70 @@
 
 footer {
     background-color: $secondary-color;
-    color: $white;
-    text-align: center;
-    font-size: 25px;
-
-    a {
-        color: $white;
-        text-decoration: none;
-
-        transition: all $transition-fast;
-
-        &:hover {
-            opacity: .8;
-            transform: translateY(-2px);
-        }
-    }
 }
 
-.piepagina {
+// Footer gráfico: conserva exactamente el diseño suministrado y agrega
+// zonas clickeables responsivas sobre navegación, redes y WhatsApp.
+.footer-grafico {
     grid-area: footer;
-    background-color: $secondary-color;
-    background-image: url(../assets/baner-footer-final.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: $white;
-    min-height: 350px;
+    width: 100%;
+    overflow: hidden;
+    background: #07121c;
 }
 
-.contenedorfooter {
-    width: 90%;
-    max-width: 900px;
-    min-height: 250px;
+.footer-imagen-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 2048px;
     margin: 0 auto;
-    padding: 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: $gap-medium;
+    line-height: 0;
 }
 
-.menuredes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: $gap-medium;
-    list-style: none;
+.footer-imagen {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
-    a {
-        color: $white;
-        text-decoration: none;
+.hotspot {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+        background-color: rgba(31, 102, 255, 0.16);
+        box-shadow: 0 0 0 2px rgba(31, 102, 255, 0.55);
+        outline: none;
     }
 }
 
-/* MEDIA QUERIES DEL FOOTER */
+// Enlaces de navegación (posiciones relativas a la imagen original 2048x682)
+.nav-inicio    { left: 36.7%; top: 25.0%; width: 10.5%; height: 7.5%; }
+.nav-sobremi   { left: 36.7%; top: 32.5%; width: 10.5%; height: 7.5%; }
+.nav-servicios { left: 36.7%; top: 40.0%; width: 10.5%; height: 7.5%; }
+.nav-proyectos { left: 36.7%; top: 47.5%; width: 10.5%; height: 7.5%; }
+.nav-contacto  { left: 36.7%; top: 55.0%; width: 10.5%; height: 7.5%; }
 
-@media (min-width: 768px) {
+// Redes sociales
+.social-instagram { left: 78.2%; top: 61.5%; width: 5.0%; height: 13.5%; }
+.social-facebook  { left: 83.2%; top: 61.5%; width: 5.0%; height: 13.5%; }
+.social-tiktok    { left: 88.2%; top: 61.5%; width: 5.0%; height: 13.5%; }
 
-    .botones {
-        justify-content: flex-start;
+// El icono de WhatsApp de la columna Contacto también es clickeable.
+.contacto-whatsapp { left: 78.2%; top: 23.0%; width: 14.0%; height: 8.0%; }
+
+.volver-arriba-grafico { right: 1.8%; bottom: 4.0%; width: 4.0%; height: 9.0%; }
+
+// En pantallas pequeñas mantenemos la imagen completa, sin recortes ni scroll horizontal.
+@media (max-width: 767px) {
+    .footer-grafico {
+        overflow-x: hidden;
     }
 
-    .contenedorfooter {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-@media (min-width: 1024px) {
-
-    .piepagina {
-        padding: 2rem 0;
+    .footer-imagen-wrap {
+        width: 100%;
     }
 }
