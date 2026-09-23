@@ -31,15 +31,6 @@ body {
   text-align: center;
 }
 
-
-.titulo-principal {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333333;
-  margin: 30px auto;
-  line-height: 1.2;
-}
-
 figcaption {
   display: none;
 }
@@ -55,7 +46,25 @@ main li {
   color: #333333;
 }
 
+.titulo-principal {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 30px auto;
+  line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+  .titulo-principal {
+    font-size: 2rem;
+  }
+}
 .encabezado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   grid-area: header;
   background-color: #262626;
   color: #FFFFFF;
@@ -85,6 +94,16 @@ main li {
     height: 550px;
   }
 }
+@keyframes aparecer-logo {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .menu-nav {
   gap: 30px;
 }
@@ -108,6 +127,7 @@ main li {
 }
 
 .logo img {
+  animation: aparecer-logo 0.8s ease-out;
   transition: transform 0.4s ease;
 }
 .logo img:hover {
@@ -127,96 +147,141 @@ main li {
   color: #FFFFFF !important;
 }
 
-footer {
-  background-color: #262626;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: clamp(1rem, 2vw, 1.35rem);
-}
-footer a {
-  color: #FFFFFF;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-footer a:hover {
-  opacity: 0.8;
-  transform: translateY(-2px);
-}
-
-.piepagina {
-  grid-area: footer;
-  width: 100%;
-  overflow: hidden;
-  color: #FFFFFF;
-  background-color: #06111f;
-  background-image: url(../assets/baner-footer-final.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 2rem 1rem 1rem;
-}
-
-.contenedorfooter {
-  width: min(100%, 900px);
-  margin: 0 auto;
-  padding: 1.5rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-.contenedorfooter figure {
-  margin: 0;
-  max-width: 100%;
-}
-.contenedorfooter figure img {
-  display: block;
-  width: min(212px, 70vw);
-  height: auto;
-  margin: 0 auto;
-}
-
-.menuredes {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-}
-.menuredes a {
-  display: inline-block;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-.piepagina > p {
+.logo {
+  width: min(760px, 88%);
   margin: 1rem auto 0;
-  padding: 0 1rem;
-  font-size: 0.9rem;
+}
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 767px) {
-  .piepagina {
-    background-image: none;
-    min-height: auto;
+  .logo {
+    width: min(560px, 94%);
   }
 }
-@media (min-width: 768px) {
-  .contenedorfooter {
-    flex-direction: row;
-    justify-content: space-between;
-    min-height: 230px;
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logo {
+    width: min(650px, 86%);
   }
 }
-@media (min-width: 1024px) {
-  .piepagina {
-    min-height: 350px;
-    padding: 2.5rem 1rem 1.5rem;
-    background-size: cover;
-    background-position: center center;
+footer {
+  background-color: #262626;
+}
+
+.footer-grafico {
+  grid-area: footer;
+  width: 100%;
+  overflow: hidden;
+  background: #07121c;
+}
+
+.footer-imagen-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 2048px;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+.footer-imagen {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hotspot {
+  position: absolute;
+  display: block;
+  z-index: 2;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.hotspot:hover, .hotspot:focus-visible {
+  background-color: rgba(31, 102, 255, 0.16);
+  box-shadow: 0 0 0 2px rgba(31, 102, 255, 0.55);
+  outline: none;
+}
+
+.nav-inicio {
+  left: 36.7%;
+  top: 25%;
+  width: 10.5%;
+  height: 7.5%;
+}
+
+.nav-sobremi {
+  left: 36.7%;
+  top: 32.5%;
+  width: 10.5%;
+  height: 7.5%;
+}
+
+.nav-servicios {
+  left: 36.7%;
+  top: 40%;
+  width: 10.5%;
+  height: 7.5%;
+}
+
+.nav-proyectos {
+  left: 36.7%;
+  top: 47.5%;
+  width: 10.5%;
+  height: 7.5%;
+}
+
+.nav-contacto {
+  left: 36.7%;
+  top: 55%;
+  width: 10.5%;
+  height: 7.5%;
+}
+
+.social-instagram {
+  left: 78.2%;
+  top: 61.5%;
+  width: 5%;
+  height: 13.5%;
+}
+
+.social-facebook {
+  left: 83.2%;
+  top: 61.5%;
+  width: 5%;
+  height: 13.5%;
+}
+
+.social-tiktok {
+  left: 88.2%;
+  top: 61.5%;
+  width: 5%;
+  height: 13.5%;
+}
+
+.contacto-whatsapp {
+  left: 78.2%;
+  top: 23%;
+  width: 14%;
+  height: 8%;
+}
+
+.volver-arriba-grafico {
+  right: 1.8%;
+  bottom: 4%;
+  width: 4%;
+  height: 9%;
+}
+
+@media (max-width: 767px) {
+  .footer-grafico {
+    overflow-x: hidden;
+  }
+  .footer-imagen-wrap {
+    width: 100%;
   }
 }
 /*====================================
@@ -229,6 +294,10 @@ GRID PRINCIPAL
   gap: 2rem;
 }
 
+.encabezado {
+  grid-area: header;
+}
+
 .contenedormain {
   grid-area: main;
   display: flex;
@@ -237,31 +306,25 @@ GRID PRINCIPAL
 }
 
 /*====================================
+CONTENIDO PRINCIPAL
+=====================================*/
+.main1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/*====================================
 GRID ACCESORIOS
 =====================================*/
 .main2 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "acc1" "acc2" "acc3";
   gap: 20px;
   padding: 2.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
-}
-.main2 > div {
-  width: 100%;
-}
-
-.acc1 {
-  grid-area: acc1;
-}
-
-.acc2 {
-  grid-area: acc2;
-}
-
-.acc3 {
-  grid-area: acc3;
 }
 
 /*====================================
@@ -270,14 +333,10 @@ GRID REPUESTOS
 .main3 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "rep1" "rep2" "rep3";
   gap: 20px;
   padding: 2.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
-}
-.main3 > div {
-  width: 100%;
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.1);
 }
 
 /*====================================
@@ -294,36 +353,32 @@ PROGRAMACIÓN
 }
 
 /*====================================
-MEDIA 
+MEDIA QUERY TABLET
 =====================================*/
 @media (min-width: 768px) {
   .main1 {
     flex-direction: row;
+    justify-content: center;
   }
-  .main2 {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "acc1 acc2" "acc3 acc3";
-  }
+  .main2,
   .main3 {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "rep1 rep2" "rep3 rep3";
   }
 }
+/*====================================
+MEDIA QUERY DESKTOP
+=====================================*/
 @media (min-width: 1024px) {
-  .main2 {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "acc1 acc2 acc3";
-  }
+  .main2,
   .main3 {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "rep1 rep2 rep3";
   }
   .main-programacion {
     flex-direction: row;
     justify-content: center;
   }
 }
-.btn {
+.btn, .btn-secondary, .btn-primary {
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 50px;
@@ -331,7 +386,7 @@ MEDIA
   cursor: pointer;
   transition: 0.3s;
 }
-.btn:hover {
+.btn:hover, .btn-secondary:hover, .btn-primary:hover {
   opacity: 0.9;
 }
 
@@ -360,23 +415,16 @@ MEDIA
 /* IMÁGENES DE CATEGORÍAS */
 .fotoaccesorios,
 .fotorepuesto {
+  width: 100%;
+  padding: 20px;
   transition: all 0.3s ease;
   border-radius: 15px;
-  padding: 15px;
 }
-
 .fotoaccesorios:hover,
 .fotorepuesto:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
-
-.fotoaccesorios,
-.fotorepuesto {
-  width: 100%;
-  padding: 20px;
-}
-
 .fotoaccesorios img,
 .fotorepuesto img {
   width: 100%;
@@ -398,9 +446,10 @@ FORMULARIO DE CONTACTO
 =====================================*/
 .caja-consultas {
   background-color: #262626;
+  width: 90%;
   max-width: 800px;
   margin: 50px auto;
-  padding: 6rem;
+  padding: 2rem;
   border-radius: 8px;
 }
 .caja-consultas h2 {
@@ -425,184 +474,47 @@ FORMULARIO DE CONTACTO
 }
 .form-group input,
 .form-group textarea {
+  width: 100%;
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   background-color: #FFFFFF;
   color: #333333;
   font-family: inherit;
+  transition: all 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 .form-group textarea {
   min-height: 180px;
   resize: vertical;
 }
 
+/*====================================
+MEDIA QUERY TABLET
+=====================================*/
+@media (min-width: 768px) {
+  .caja-consultas {
+    padding: 4rem;
+  }
+}
+/*====================================
+MEDIA QUERY DESKTOP
+=====================================*/
 @media (min-width: 1024px) {
   .caja-consultas {
     max-width: 900px;
+    padding: 6rem;
   }
 }
-/* -------- EFECTOS MENU NAVBAR -------- */
-.menu-nav .nav-link {
-  color: white;
-  font-weight: 500;
-  margin: 0 8px;
-  padding: 10px 15px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+.caja-consultas .contacto-descripcion {
+  color: #FFFFFF;
+  line-height: 1.6;
+  margin: 1rem 0 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
-
-@media (max-width: 767px) {
-  .titulo-principal {
-    font-size: 2rem;
-  }
-}
-
-/* Footer final responsive */
-.piepagina {
-  grid-area: footer;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  padding: 0;
-  min-height: 0;
-  background-color: #06111f;
-  background-image: none;
-}
-.piepagina .footer-banner {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
-}
-@media (max-width: 767px) {
-  .piepagina { min-height: 0; padding: 0; background-image: none; }
-  .piepagina .footer-banner { width: 100%; height: auto; }
-}
-@media (min-width: 768px) {
-  .piepagina .footer-banner { width: 100%; height: auto; }
-}
-@media (min-width: 1024px) {
-  .piepagina { min-height: 0; padding: 0; background-image: none; }
-  .piepagina .footer-banner { width: 100%; height: auto; }
-}
-
-/* ===== Ajustes finales: logo completo + footer navegable ===== */
-.logo {
-  width: min(1200px, 100%);
-  margin-inline: auto;
-}
-.logo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  animation: aparecer-logo 0.8s ease-out;
-}
-
-.piepagina {
-  grid-area: footer;
-  width: 100%;
-  overflow: hidden;
-  color: #FFFFFF;
-  background: linear-gradient(135deg, #06111f 0%, #0b1622 55%, #06111f 100%);
-  border-top: 4px solid #1F66FF;
-  line-height: 1.5;
-  padding: 0;
-  min-height: 0;
-}
-.piepagina a {
-  color: #FFFFFF;
-  text-decoration: none;
-  transition: color 0.25s ease, transform 0.25s ease;
-}
-.piepagina a:hover,
-.piepagina a:focus-visible { color: #1F66FF; }
-.footer-contenido {
-  width: min(1180px, 92%);
-  margin: 0 auto;
-  padding: 2.5rem 0 2rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  text-align: left;
-}
-.footer-marca {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-.footer-logo {
-  display: block;
-  width: min(100%, 430px);
-  height: auto;
-  object-fit: contain;
-  animation: aparecer-logo 0.8s ease-out;
-  transition: transform 0.3s ease;
-}
-.footer-logo:hover { transform: scale(1.03); }
-.footer-columna h2 {
-  margin: 0 0 1rem;
-  color: #FFFFFF;
-  font-size: 1.15rem;
-  text-transform: uppercase;
-}
-.footer-columna ul { margin: 0; padding: 0; list-style: none; }
-.footer-columna li { margin-bottom: 0.7rem; }
-.footer-columna p { margin: 0 0 0.75rem; color: #FFFFFF; }
-.footer-servicios li::before {
-  content: "›";
-  margin-right: 0.55rem;
-  color: #1F66FF;
-  font-weight: 700;
-}
-.footer-seguinos { margin-top: 1.5rem !important; }
-.footer-redes { display: flex; flex-wrap: wrap; gap: 0.7rem; }
-.footer-redes a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.55rem 0.8rem;
-  border: 1px solid #1F66FF;
-  border-radius: 999px;
-}
-.footer-redes a:hover { transform: translateY(-2px); }
-.footer-inferior {
-  width: min(1180px, 92%);
-  margin: 0 auto;
-  padding: 1rem 0 1.25rem;
-  border-top: 1px solid rgba(255,255,255,0.22);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-}
-.footer-inferior p { margin: 0; color: #FFFFFF; font-size: 0.9rem; }
-.volver-arriba { font-size: 1.6rem; line-height: 1; }
-@media (min-width: 768px) {
-  .footer-contenido { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .footer-marca { justify-content: flex-start; }
-  .footer-inferior { flex-direction: row; justify-content: space-between; }
-}
-@media (min-width: 1024px) {
-  .footer-contenido { grid-template-columns: 1.35fr 0.8fr 1fr 1fr; align-items: start; }
-}
-
-/* === Ajuste final: logo principal centrado + footer gráfico con enlaces === */
-.logo { width:min(760px,88%); margin:1rem auto 0; }
-.logo img { display:block; width:100%; height:auto; object-fit:contain; }
-@media (max-width:767px){.logo{width:min(560px,94%);}}
-@media (min-width:768px) and (max-width:1023px){.logo{width:min(650px,86%);}}
-.footer-grafico{grid-area:footer;width:100%;overflow:hidden;background:#07121c;}
-.footer-imagen-wrap{position:relative;width:100%;max-width:2048px;margin:0 auto;line-height:0;}
-.footer-imagen{display:block;width:100%;height:auto;}
-.hotspot{position:absolute;display:block;z-index:2;border-radius:8px;transition:background-color .2s ease,box-shadow .2s ease;}
-.hotspot:hover,.hotspot:focus-visible{background-color:rgba(31,102,255,.16);box-shadow:0 0 0 2px rgba(31,102,255,.55);outline:none;}
-.nav-inicio{left:36.7%;top:25%;width:10.5%;height:7.5%;}.nav-sobremi{left:36.7%;top:32.5%;width:10.5%;height:7.5%;}.nav-servicios{left:36.7%;top:40%;width:10.5%;height:7.5%;}.nav-proyectos{left:36.7%;top:47.5%;width:10.5%;height:7.5%;}.nav-contacto{left:36.7%;top:55%;width:10.5%;height:7.5%;}
-.social-instagram{left:78.2%;top:61.5%;width:5%;height:13.5%;}.social-facebook{left:83.2%;top:61.5%;width:5%;height:13.5%;}.social-tiktok{left:88.2%;top:61.5%;width:5%;height:13.5%;}.contacto-whatsapp{left:78.2%;top:23%;width:14%;height:8%;}.volver-arriba-grafico{right:1.8%;bottom:4%;width:4%;height:9%;}
-@media (max-width:767px){.footer-grafico{overflow-x:hidden}.footer-imagen-wrap{width:100%}}
-
-.caja-consultas .contacto-descripcion{color:#fff;line-height:1.6;margin:1rem 0 1.5rem}
