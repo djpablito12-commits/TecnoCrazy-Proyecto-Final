@@ -1,336 +1,139 @@
-﻿# TecnoCrazy 🚀💻
+﻿# TecnoCrazy — Proyecto Final
 
-## Descripción del proyecto
+**Proyecto Final del curso de Desarrollo Web de Coderhouse**
 
-TecnoCrazy es un sitio web desarrollado como proyecto final para el curso de Desarrollo Web de Coderhouse.
+**Autor:** Pablo Cepeda
+**Ubicación:** Santa Fe, Argentina
+**Año:** 2026
 
-El objetivo del proyecto es crear un sitio web para un emprendimiento tecnológico enfocado en la reparación de dispositivos electrónicos, venta de accesorios para celulares y desarrollo de soluciones digitales.
+## Descripción
 
-El proyecto busca combinar tecnología, diseño y funcionalidad, aplicando los conocimientos adquiridos durante el curso y utilizando HTML5, SCSS, Bootstrap y herramientas de desarrollo frontend.
+TecnoCrazy es un sitio web dedicado a la tecnología, los accesorios para celulares, la reparación de dispositivos electrónicos y el desarrollo web.
 
----
+El proyecto integra los conocimientos adquiridos durante el curso de Desarrollo Web de Coderhouse mediante la creación de un sitio estático de cinco páginas, con diseño responsivo, HTML semántico, Bootstrap, SCSS, animaciones y optimización SEO.
 
-# Tecnologías utilizadas
+## Tecnologías utilizadas
 
-* HTML5
-* SCSS / SASS
-* CSS3
-* Bootstrap 5
-* JavaScript
-* AOS (Animate On Scroll)
-* Flexbox
-* Google Fonts
-* Diseño responsive
-* Git
-* GitHub
+* HTML5 y CSS3.
+* SCSS / Sass.
+* Bootstrap 5.
+* AOS (Animate On Scroll).
+* Flexbox y CSS Grid.
+* Google Fonts.
+* Git y GitHub.
 
----
+Se utilizan los scripts necesarios para el funcionamiento de Bootstrap y AOS, sin desarrollar funcionalidades propias con JavaScript.
 
-# Estructura del proyecto
+## Estructura del proyecto
 
 ```text
-TecnoCrazy/
-│
+Teznocrazy_final/
 ├── index.html
-│
 ├── pages/
 │   ├── productos.html
 │   ├── proyectos.html
 │   ├── contacto.html
 │   └── sobremi.html
-│
+├── assets/
 ├── scss/
 │   ├── base/
 │   ├── components/
 │   ├── layout/
 │   ├── utilities/
 │   └── main.scss
-│
-├── css/
-│   └── style.css
-│
-├── assets/
-│
+├── styles/
+│   ├── style.css
+│   └── style.css.map
 ├── robots.txt
 ├── sitemap.xml
 └── README.md
 ```
 
----
+## Páginas del sitio
 
-# Páginas del proyecto
+### Inicio — index.html
 
-## Página principal — index.html
+Presenta la identidad de TecnoCrazy, su logo, una barra de navegación responsiva, un carrusel de Bootstrap y secciones dedicadas a accesorios, repuestos, herramientas y desarrollo web.
 
-En la página de inicio se presenta la identidad de TecnoCrazy.
+### Productos — productos.html
 
-Elementos implementados:
+Muestra productos tecnológicos mediante tarjetas con imágenes, descripciones y precios. Incorpora Flexbox, transiciones y efectos visuales.
 
-* Barra de navegación responsive.
-* Logo de TecnoCrazy.
-* Presentación general del emprendimiento.
-* Carrusel de imágenes mediante Bootstrap.
-* Sección de accesorios para celulares.
-* Sección de repuestos y herramientas.
-* Sección dedicada a programación y desarrollo web.
-* Animaciones y efectos visuales.
-* Footer con información de contacto y redes sociales.
+### Proyectos — proyectos.html
 
----
+Presenta proyectos y servicios relacionados con el desarrollo de páginas web, las soluciones digitales y la reparación tecnológica.
 
-## Página Productos — productos.html
+### Sobre mí — sobremi.html
 
-En esta sección se presentan diferentes productos relacionados con tecnología.
+Incluye la presentación de Pablo Cepeda, su formación en programación, su experiencia en reparación de dispositivos electrónicos y su interés por el desarrollo web.
 
-Elementos implementados:
+### Contacto — contacto.html
 
-* Tarjetas de productos.
-* Imágenes descriptivas.
-* Nombre y precio de los productos.
-* Organización del contenido mediante Flexbox.
-* Efectos hover y transiciones.
-* Diseño adaptable a dispositivos móviles.
+Permite comunicarse con TecnoCrazy mediante un enlace de correo electrónico y los datos de contacto disponibles en el sitio.
 
----
+El botón de correo abre la aplicación de correo configurada en el dispositivo del visitante. El sitio no utiliza un servidor para procesar formularios.
 
-## Página Proyectos — proyectos.html
+## Bootstrap y diseño responsivo
 
-En esta página se presentan proyectos y servicios relacionados con:
+Se utiliza Bootstrap 5 para implementar componentes como la barra de navegación adaptable, el menú hamburguesa y el carrusel de imágenes.
 
-* Desarrollo de páginas web.
-* Soluciones digitales.
-* Reparación tecnológica.
-* Servicios relacionados con tecnología.
+Los estilos personalizados incorporan Flexbox, Grid y media queries para adaptar el contenido a computadoras, tablets y celulares.
 
-Se aplicaron estilos personalizados, animaciones y una estructura responsive para mejorar la presentación visual.
+## SCSS y organización de estilos
 
----
+El proyecto organiza los estilos en archivos parciales agrupados por función.
 
-## Página Sobre mí — sobremi.html
+Se utilizan variables, nesting, mixins con parámetros, `@extend`, transiciones, transformaciones, efectos hover, animaciones y media queries.
 
-Esta sección contiene información personal y profesional del desarrollador.
+El archivo `scss/main.scss` reúne los módulos mediante `@use`.
 
-Incluye:
+Para compilar los estilos, ejecutar desde la carpeta principal:
 
-* Presentación de Pablo Cepeda.
-* Formación en programación.
-* Interés por la tecnología.
-* Experiencia en reparación de dispositivos electrónicos.
-* Información relacionada con el desarrollo web.
+```bash
+npx sass scss/main.scss styles/style.css
+```
 
----
+## Animaciones
 
-## Página Contacto — contacto.html
+El sitio incorpora animaciones propias mediante CSS y SCSS, utilizando `@keyframes`, `transition`, `transform` y efectos hover.
 
-Página destinada a facilitar la comunicación con los usuarios.
+También utiliza la biblioteca AOS para animar elementos cuando aparecen durante el desplazamiento de la página.
 
-Elementos implementados:
+## Identidad visual
 
-* Formulario de contacto.
-* Campos para completar datos.
-* Botones de envío.
-* Información de contacto.
-* Diseño responsive.
-
----
-
-# SCSS y organización de estilos
-
-Los estilos del proyecto fueron desarrollados utilizando SCSS/SASS.
-
-El código se organizó mediante archivos parciales para mantener una estructura ordenada y facilitar el mantenimiento del proyecto.
-
-Se aplicaron diferentes recursos de SCSS:
-
-* Variables.
-* Nesting.
-* Mixins.
-* Mixins con parámetros.
-* `@extend`.
-* Organización mediante partials.
-* Transformaciones.
-* Transiciones.
-* Animaciones.
-* Efectos hover.
-* Sombras.
-* Media queries.
-
-El archivo `main.scss` funciona como archivo principal para importar los diferentes partials del proyecto.
-
----
-
-# Animaciones
-
-Se incorporaron animaciones para mejorar la experiencia visual y la interactividad del sitio.
-
-Se utilizaron recursos de CSS/SCSS como:
-
-* `transition`
-* `transform`
-* `@keyframes`
-* Efectos `hover`
-* Animaciones de entrada
-
-Las animaciones fueron utilizadas de manera sutil para mantener una experiencia visual agradable sin afectar la navegación.
-
----
-
-# Librería de animaciones — AOS
-
-El proyecto incorpora la librería **AOS (Animate On Scroll)** para generar animaciones cuando determinados elementos aparecen durante el desplazamiento de la página.
-
-La implementación de AOS permite incorporar efectos de entrada a diferentes elementos visuales del sitio.
-
-El objetivo es mejorar la interacción y presentación del contenido manteniendo las animaciones de forma moderada.
-
----
-
-# Diseño responsive
-
-El sitio fue desarrollado para adaptarse a diferentes tamaños de pantalla.
-
-Se trabajó principalmente con:
-
-* Diseño desktop.
-* Diseño mobile.
-* Media queries.
-* Flexbox.
-* Componentes responsive de Bootstrap.
-* Navbar adaptable.
-* Organización flexible de tarjetas y secciones.
-* Ajustes de tamaños, espacios y tipografías según el dispositivo.
-
-La responsividad fue aplicada a las cinco páginas HTML del proyecto:
-
-* `index.html`
-* `productos.html`
-* `proyectos.html`
-* `contacto.html`
-* `sobremi.html`
-
----
-
-# Bootstrap implementado
-
-Bootstrap 5 fue utilizado para complementar el desarrollo del sitio.
-
-Se implementaron componentes y recursos como:
-
-* Navbar responsive.
-* Menú hamburguesa para dispositivos móviles.
-* Carrusel de imágenes.
-* Sistema de grillas.
-* Clases utilitarias.
-* Componentes responsive.
-
-Los estilos personalizados mediante SCSS se combinaron con Bootstrap para adaptar el framework a la identidad visual de TecnoCrazy.
-
----
-
-# Diseño y estilos
-
-Para la identidad visual del proyecto se utilizó una estética tecnológica basada principalmente en tonos azules, negros, grises y blancos.
-
-Paleta principal:
+La paleta de TecnoCrazy está compuesta por:
 
 * Azul principal: `#1F66FF`
-* Negro/gris oscuro: `#262626`
+* Gris oscuro: `#262626`
 * Fondo claro: `#F2F2F2`
 * Texto: `#333333`
 * Blanco: `#FFFFFF`
 
-Se aplicaron diferentes recursos visuales:
+La tipografía principal es Poppins, obtenida mediante Google Fonts.
 
-* Variables.
-* Transiciones.
-* Efectos hover.
-* Sombras.
-* Transformaciones.
-* Animaciones.
-* Diseño responsive.
-* Componentes de Bootstrap.
+## SEO
 
----
+El proyecto incorpora títulos y metadescripciones específicos para cada página, palabras clave, encabezados semánticos y atributos `alt` en las imágenes.
 
-# Funcionalidades
+También incluye los archivos `robots.txt` y `sitemap.xml`.
 
-El sitio web cuenta con:
+**Pendiente de publicación:** actualizar el sitemap y robots.txt con las URL definitivas e incorporar enlaces canonical absolutos una vez que el sitio esté desplegado.
 
-* Navegación entre las diferentes páginas.
-* Visualización de productos y accesorios tecnológicos.
-* Carrusel de imágenes.
-* Formulario de contacto.
-* Diseño adaptable a dispositivos móviles.
-* Presentación de proyectos y servicios.
-* Información sobre el desarrollador.
-* Animaciones CSS/SCSS.
-* Animaciones mediante AOS.
-* Componentes responsive de Bootstrap.
-
----
-
-# Objetivo de la tercera pre-entrega
-
-Esta etapa del proyecto tuvo como objetivo finalizar el diseño del sitio y mejorar su funcionamiento en dispositivos desktop y mobile.
-
-Los principales objetivos fueron:
-
-* Finalizar la responsividad de las cinco páginas HTML.
-* Incorporar animaciones locales.
-* Implementar una librería de animaciones.
-* Profundizar el uso de SCSS.
-* Utilizar variables y nesting.
-* Implementar mixins con parámetros.
-* Aplicar `@extend`.
-* Organizar los estilos mediante partials.
-* Mantener una estructura HTML limpia y ordenada.
-* Mejorar la experiencia visual e interacción del usuario.
-
----
-
-# Cómo visualizar el proyecto
-
-Para visualizar el sitio web:
+## Cómo ejecutar el proyecto
 
 1. Clonar o descargar el repositorio.
-2. Abrir la carpeta del proyecto.
-3. Abrir el proyecto con Visual Studio Code.
-4. Ejecutar `index.html` utilizando Live Server.
+2. Abrir la carpeta del proyecto en Visual Studio Code.
+3. Abrir `index.html` mediante Live Server.
+4. Navegar por las cinco páginas para explorar el sitio.
 
-También es posible abrir directamente `index.html` en un navegador web, aunque se recomienda utilizar Live Server para una mejor experiencia de desarrollo.
+## Repositorio
 
----
+[Ver el código fuente en GitHub](https://github.com/djpablito12-commits/TecnoCrazy-Proyecto-Final)
 
-# Repositorio
+## Sitio publicado
 
-El proyecto se encuentra alojado en GitHub en un repositorio público.
-
-Desde allí se puede acceder al código fuente, estructura de carpetas, archivos HTML, SCSS, CSS, imágenes y documentación del proyecto.
-
-## SEO básico
-
-El proyecto incorpora mejoras básicas de posicionamiento y accesibilidad:
-
-* Etiquetas `title` específicas para cada página.
-* Meta descriptions y meta keywords.
-* Jerarquía semántica de encabezados con un `h1` visible por página.
-* Enlaces canonical.
-* Textos `alt` descriptivos en las imágenes.
-* Nombres de archivos de imágenes más descriptivos.
-* Archivo `robots.txt`.
-* Archivo `sitemap.xml`.
-* Referencias de contenido orientadas a TecnoCrazy y a Santa Fe, Argentina.
-
-> Nota: si el sitio se publica en un dominio diferente al configurado en `sitemap.xml`, se debe actualizar allí la URL base de las páginas.
+**Pendiente:** incorporar aquí la URL de Vercel o Netlify una vez finalizada la publicación.
 
 ---
 
----
-
-# Autor
-
-**Pablo Cepeda**
-
-Proyecto realizado para el curso de Desarrollo Web — Coderhouse.
-
-**Año: 2026**
+**Pablo Cepeda — Proyecto Final de Desarrollo Web, Coderhouse, 2026.**
