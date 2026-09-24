@@ -1,4 +1,5 @@
+
 User-agent: *
 Allow: /
 
-Sitemap: https://djpablito12-commits.github.io/TecnoCrazy-SEO/sitemap.xml
+Sitemap: https://tecno-crazy-proyecto-final-28z3.vercel.app/sitemap.xml

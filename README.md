@@ -1,9 +1,10 @@
-﻿# TecnoCrazy — Proyecto Final
+﻿
+# TecnoCrazy — Proyecto Final
 
 **Proyecto Final del curso de Desarrollo Web de Coderhouse**
 
-**Autor:** Pablo Cepeda
-**Ubicación:** Santa Fe, Argentina
+**Autor:** Pablo Cepeda  
+**Ubicación:** Santa Fe, Argentina  
 **Año:** 2026
 
 ## Descripción
@@ -12,15 +13,24 @@ TecnoCrazy es un sitio web dedicado a la tecnología, los accesorios para celula
 
 El proyecto integra los conocimientos adquiridos durante el curso de Desarrollo Web de Coderhouse mediante la creación de un sitio estático de cinco páginas, con diseño responsivo, HTML semántico, Bootstrap, SCSS, animaciones y optimización SEO.
 
+## Sitio web publicado
+
+**[Visitar TecnoCrazy en Vercel](https://tecno-crazy-proyecto-final-28z3.vercel.app/)**
+
+## Repositorio de GitHub
+
+**[Ver el código fuente](https://github.com/djpablito12-commits/TecnoCrazy-Proyecto-Final)**
+
 ## Tecnologías utilizadas
 
-* HTML5 y CSS3.
-* SCSS / Sass.
-* Bootstrap 5.
-* AOS (Animate On Scroll).
-* Flexbox y CSS Grid.
-* Google Fonts.
-* Git y GitHub.
+- HTML5 y CSS3.
+- SCSS / Sass.
+- Bootstrap 5.
+- AOS (Animate On Scroll).
+- Flexbox y CSS Grid.
+- Google Fonts.
+- Git y GitHub.
+- Vercel.
 
 Se utilizan los scripts necesarios para el funcionamiento de Bootstrap y AOS, sin desarrollar funcionalidades propias con JavaScript.
 
@@ -57,7 +67,7 @@ Presenta la identidad de TecnoCrazy, su logo, una barra de navegación responsiv
 
 ### Productos — productos.html
 
-Muestra productos tecnológicos mediante tarjetas con imágenes, descripciones y precios. Incorpora Flexbox, transiciones y efectos visuales.
+Muestra productos tecnológicos mediante tarjetas con imágenes, descripciones y precios. Incorpora Bootstrap, transiciones y efectos visuales.
 
 ### Proyectos — proyectos.html
 
@@ -103,11 +113,11 @@ También utiliza la biblioteca AOS para animar elementos cuando aparecen durante
 
 La paleta de TecnoCrazy está compuesta por:
 
-* Azul principal: `#1F66FF`
-* Gris oscuro: `#262626`
-* Fondo claro: `#F2F2F2`
-* Texto: `#333333`
-* Blanco: `#FFFFFF`
+- Azul principal: `#1F66FF`
+- Gris oscuro: `#262626`
+- Fondo claro: `#F2F2F2`
+- Texto: `#333333`
+- Blanco: `#FFFFFF`
 
 La tipografía principal es Poppins, obtenida mediante Google Fonts.
 
@@ -117,7 +127,9 @@ El proyecto incorpora títulos y metadescripciones específicos para cada págin
 
 También incluye los archivos `robots.txt` y `sitemap.xml`.
 
-**Pendiente de publicación:** actualizar el sitemap y robots.txt con las URL definitivas e incorporar enlaces canonical absolutos una vez que el sitio esté desplegado.
+La URL definitiva del sitio es:
+
+https://tecno-crazy-proyecto-final-28z3.vercel.app/
 
 ## Cómo ejecutar el proyecto
 
@@ -126,13 +138,13 @@ También incluye los archivos `robots.txt` y `sitemap.xml`.
 3. Abrir `index.html` mediante Live Server.
 4. Navegar por las cinco páginas para explorar el sitio.
 
-## Repositorio
+## Despliegue
 
-[Ver el código fuente en GitHub](https://github.com/djpablito12-commits/TecnoCrazy-Proyecto-Final)
+El sitio está publicado en Vercel y el repositorio se encuentra alojado en GitHub.
 
-## Sitio publicado
+**Sitio:** https://tecno-crazy-proyecto-final-28z3.vercel.app/
 
-**Pendiente:** incorporar aquí la URL de Vercel o Netlify una vez finalizada la publicación.
+**Repositorio:** https://github.com/djpablito12-commits/TecnoCrazy-Proyecto-Final
 
 ---
 
