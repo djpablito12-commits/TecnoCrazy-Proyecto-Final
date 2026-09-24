@@ -284,12 +284,12 @@ footer {
     width: 100%;
   }
 }
-/*====================================
-GRID PRINCIPAL
-=====================================*/
+/* ====================================
+   GRID PRINCIPAL
+===================================== */
 .bigcontainer {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-areas: "header" "main" "footer";
   gap: 2rem;
 }
@@ -303,11 +303,12 @@ GRID PRINCIPAL
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
 }
 
-/*====================================
-CONTENIDO PRINCIPAL
-=====================================*/
+/* ====================================
+   CONTENIDO PRINCIPAL
+===================================== */
 .main1 {
   display: flex;
   flex-direction: column;
@@ -315,33 +316,46 @@ CONTENIDO PRINCIPAL
   gap: 20px;
 }
 
-/*====================================
-GRID ACCESORIOS
-=====================================*/
-.main2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  padding: 2.5rem;
+/* ====================================
+   ACCESORIOS Y REPUESTOS
+===================================== */
+.main2,
+.main3 {
+  width: 100%;
+  max-width: 1200px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
 
-/*====================================
-GRID REPUESTOS
-=====================================*/
-.main3 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  padding: 2.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.1);
+/*
+   En Productos, .main2 y .main3 también
+   tienen la clase .row de Bootstrap.
+   Dejamos que Bootstrap controle las columnas.
+*/
+.main2.row,
+.main3.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem 0;
 }
 
-/*====================================
-PROGRAMACIÓN
-=====================================*/
+/*
+   Conservamos CSS Grid para cualquier otra
+   sección que utilice estas clases sin .row.
+*/
+.main2:not(.row),
+.main3:not(.row) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  padding: 2rem;
+}
+
+/* ====================================
+   PROGRAMACIÓN
+===================================== */
 .main-programacion {
   display: flex;
   flex-direction: column;
@@ -352,26 +366,26 @@ PROGRAMACIÓN
   padding: 2rem;
 }
 
-/*====================================
-MEDIA QUERY TABLET
-=====================================*/
+/* ====================================
+   TABLET
+===================================== */
 @media (min-width: 768px) {
   .main1 {
     flex-direction: row;
     justify-content: center;
   }
-  .main2,
-  .main3 {
-    grid-template-columns: repeat(2, 1fr);
+  .main2:not(.row),
+  .main3:not(.row) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-/*====================================
-MEDIA QUERY DESKTOP
-=====================================*/
+/* ====================================
+   COMPUTADORA
+===================================== */
 @media (min-width: 1024px) {
-  .main2,
-  .main3 {
-    grid-template-columns: repeat(3, 1fr);
+  .main2:not(.row),
+  .main3:not(.row) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .main-programacion {
     flex-direction: row;
@@ -412,35 +426,72 @@ MEDIA QUERY DESKTOP
     justify-content: flex-start;
   }
 }
-/* IMÁGENES DE CATEGORÍAS */
+/* ====================================
+   TARJETAS DE PRODUCTOS Y REPUESTOS
+===================================== */
 .fotoaccesorios,
 .fotorepuesto {
   width: 100%;
+  min-width: 0;
   padding: 20px;
-  transition: all 0.3s ease;
   border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .fotoaccesorios:hover,
 .fotorepuesto:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
+.fotoaccesorios figure,
+.fotorepuesto figure {
+  width: 100%;
+  margin: 0;
+}
 .fotoaccesorios img,
 .fotorepuesto img {
+  display: block;
   width: 100%;
   max-width: 400px;
-  height: auto;
-  display: block;
-  margin: auto;
+  height: 220px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.fotoaccesorios .card-body,
+.fotorepuesto .card-body {
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+}
+.fotoaccesorios .card-title,
+.fotoaccesorios .card-text,
+.fotorepuesto .card-title,
+.fotorepuesto .card-text {
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
+/* ====================================
+   IMÁGENES DE REPUESTOS
+===================================== */
 .main3 img {
   max-width: 100%;
-  display: block;
-  margin: auto;
-  padding: 20px;
+  object-fit: contain;
 }
 
+/* ====================================
+   AJUSTES PARA CELULARES
+===================================== */
+@media (max-width: 767px) {
+  .fotoaccesorios,
+  .fotorepuesto {
+    padding: 15px;
+  }
+  .fotoaccesorios img,
+  .fotorepuesto img {
+    height: 180px;
+  }
+}
 /*====================================
 FORMULARIO DE CONTACTO
 =====================================*/

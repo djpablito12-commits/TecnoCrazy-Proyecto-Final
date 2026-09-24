@@ -1,12 +1,13 @@
+
 @use "../utilities/variables" as *;
 
-/*====================================
-GRID PRINCIPAL
-=====================================*/
+/* ====================================
+   GRID PRINCIPAL
+===================================== */
 
 .bigcontainer {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
         "header"
         "main"
@@ -23,12 +24,12 @@ GRID PRINCIPAL
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 0;
 }
 
-
-/*====================================
-CONTENIDO PRINCIPAL
-=====================================*/
+/* ====================================
+   CONTENIDO PRINCIPAL
+===================================== */
 
 .main1 {
     display: flex;
@@ -37,38 +38,49 @@ CONTENIDO PRINCIPAL
     gap: $gap-medium;
 }
 
+/* ====================================
+   ACCESORIOS Y REPUESTOS
+===================================== */
 
-/*====================================
-GRID ACCESORIOS
-=====================================*/
-
-.main2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: $gap-medium;
-    padding: 2.5rem;
-    border: 1px solid rgba(255, 255, 255, .1);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, .3);
-}
-
-
-/*====================================
-GRID REPUESTOS
-=====================================*/
-
+.main2,
 .main3 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: $gap-medium;
-    padding: 2.5rem;
-    border: 1px solid rgba(255, 255, 255, .1);
-    box-shadow: 0 8px 12px rgba(255, 255, 255, .1);
+    width: 100%;
+    max-width: 1200px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
 
+/*
+   En Productos, .main2 y .main3 también
+   tienen la clase .row de Bootstrap.
+   Dejamos que Bootstrap controle las columnas.
+*/
 
-/*====================================
-PROGRAMACIÓN
-=====================================*/
+.main2.row,
+.main3.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem 0;
+}
+
+/*
+   Conservamos CSS Grid para cualquier otra
+   sección que utilice estas clases sin .row.
+*/
+
+.main2:not(.row),
+.main3:not(.row) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: $gap-medium;
+    padding: 2rem;
+}
+
+/* ====================================
+   PROGRAMACIÓN
+===================================== */
 
 .main-programacion {
     display: flex;
@@ -80,34 +92,30 @@ PROGRAMACIÓN
     padding: 2rem;
 }
 
-
-/*====================================
-MEDIA QUERY TABLET
-=====================================*/
+/* ====================================
+   TABLET
+===================================== */
 
 @media (min-width: 768px) {
-
     .main1 {
         flex-direction: row;
         justify-content: center;
     }
 
-    .main2,
-    .main3 {
-        grid-template-columns: repeat(2, 1fr);
+    .main2:not(.row),
+    .main3:not(.row) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-
-/*====================================
-MEDIA QUERY DESKTOP
-=====================================*/
+/* ====================================
+   COMPUTADORA
+===================================== */
 
 @media (min-width: 1024px) {
-
-    .main2,
-    .main3 {
-        grid-template-columns: repeat(3, 1fr);
+    .main2:not(.row),
+    .main3:not(.row) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .main-programacion {

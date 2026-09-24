@@ -1,34 +1,74 @@
+
 @use "../utilities/variables" as *;
 
-/* IMÁGENES DE CATEGORÍAS */
+/* ====================================
+   TARJETAS DE PRODUCTOS Y REPUESTOS
+===================================== */
 
 .fotoaccesorios,
 .fotorepuesto {
     width: 100%;
+    min-width: 0;
     padding: 20px;
-    transition: all $transition-fast;
     border-radius: $border-radius-card;
+    transition: transform $transition-fast,
+                box-shadow $transition-fast;
 
     &:hover {
         transform: translateY(-10px);
         box-shadow: $shadow-card;
     }
 
+    figure {
+        width: 100%;
+        margin: 0;
+    }
+
     img {
+        display: block;
         width: 100%;
         max-width: 400px;
-        height: auto;
-        display: block;
-        margin: auto;
+        height: 220px;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .card-body {
+        width: 100%;
+        min-width: 0;
+        text-align: center;
+    }
+
+    .card-title,
+    .card-text {
+        white-space: normal;
+        overflow-wrap: normal;
+        word-break: normal;
     }
 }
+
+/* ====================================
+   IMÁGENES DE REPUESTOS
+===================================== */
 
 .main3 {
     img {
         max-width: 100%;
-        display: block;
-        margin: auto;
-        padding: 20px;
+        object-fit: contain;
     }
 }
 
+/* ====================================
+   AJUSTES PARA CELULARES
+===================================== */
+
+@media (max-width: 767px) {
+    .fotoaccesorios,
+    .fotorepuesto {
+        padding: 15px;
+
+        img {
+            height: 180px;
+        }
+    }
+}
