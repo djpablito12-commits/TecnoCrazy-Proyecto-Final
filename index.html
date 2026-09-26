@@ -99,68 +99,109 @@
 
             <h1 class="titulo-principal">TecnoCrazy: tecnología, reparación y desarrollo web</h1>
 
-            <!-- CARRUSEL -->
-            <div id="carouselExample" class="carousel slide">
+            
+<!-- CARRUSEL DE OFERTAS -->
+<section class="carrusel-ofertas"
+         aria-label="Promociones de TecnoCrazy">
 
-                <div class="carousel-inner">
+    <div id="carouselExample"
+         class="carousel slide"
+         data-bs-ride="carousel"
+         data-bs-interval="4500">
 
-                    <div class="carousel-item active">
+        <!-- INDICADORES -->
+        <div class="carousel-indicators">
 
-                        <img src="assets/cargador-celular.jpg"
-                            class="d-block w-100"
-                            alt="Cargador de celular">
-
-                    </div>
-
-                    <div class="carousel-item">
-
-                        <img src="assets/img-auriculares-vincha.png"
-                            class="d-block w-100"
-                            alt="Auriculares inalámbricos con vincha">
-
-                    </div>
-
-                    <div class="carousel-item">
-
-                        <img src="assets/img-auriculares-iphone.webp"
-                            class="d-block w-100"
-                            alt="Auriculares iPhone">
-
-                    </div>
-
-                </div>
-
-                <button class="carousel-control-prev"
-                    type="button"
+            <button type="button"
                     data-bs-target="#carouselExample"
-                    data-bs-slide="prev">
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Auriculares">
+            </button>
 
-                    <span class="carousel-control-prev-icon"
-                        aria-hidden="true">
-                    </span>
-
-                    <span class="visually-hidden">
-                        Previous
-                    </span>
-
-                </button>
-
-                <button class="carousel-control-next"
-                    type="button"
+            <button type="button"
                     data-bs-target="#carouselExample"
-                    data-bs-slide="next">
+                    data-bs-slide-to="1"
+                    aria-label="Cargadores de iPhone">
+            </button>
 
-                    <span class="carousel-control-next-icon"
-                        aria-hidden="true">
-                    </span>
+            <button type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide-to="2"
+                    aria-label="Consolas">
+            </button>
 
-                    <span class="visually-hidden">
-                        Next
-                    </span>
+        </div>
 
-                </button>
+        <!-- BANNERS -->
+        <div class="carousel-inner">
+
+            <!-- AURICULARES: 30% -->
+            <div class="carousel-item active">
+
+                <img src="assets/banner-descuento-auriculares.png"
+                     class="d-block w-100"
+                     alt="30% de descuento en auriculares TecnoCrazy"
+                     fetchpriority="high">
 
             </div>
+
+            <!-- CARGADORES: 40% -->
+            <div class="carousel-item">
+
+                <img src="assets/banner-descuento-cargadores-iphone.png"
+                     class="d-block w-100"
+                     alt="40% de descuento en cargadores de iPhone"
+                     loading="lazy">
+
+            </div>
+
+            <!-- CONSOLAS: 30% -->
+            <div class="carousel-item">
+
+                <img src="assets/banner-descuento-consolas.png"
+                     class="d-block w-100"
+                     alt="30% de descuento en consolas"
+                     loading="lazy">
+
+            </div>
+
+        </div>
+
+        <!-- ANTERIOR -->
+        <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"
+                  aria-hidden="true"></span>
+
+            <span class="visually-hidden">
+                Anterior
+            </span>
+
+        </button>
+
+        <!-- SIGUIENTE -->
+        <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"
+                  aria-hidden="true"></span>
+
+            <span class="visually-hidden">
+                Siguiente
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
 
             <!-- ACCESORIOS -->
             <section>
@@ -428,6 +469,14 @@
                aria-label="Contactar por WhatsApp"
                title="WhatsApp"></a>
 
+            <!-- TIKTOK -->
+              <a class="hotspot social-tiktok"
+               href="https://www.tiktok.com/@cepeda.pablo"
+               target="_blank"
+              rel="noopener noreferrer"
+               aria-label="TikTok de Pablo Cepeda"
+               title="TikTok"></a>
+
         </div>
 
         <!-- VOLVER ARRIBA -->
@@ -439,6 +488,69 @@
     </div>
 
 </footer>
+
+
+<!-- FOOTER RESPONSIVE -->
+<footer class="footer-responsive">
+  <div class="footer-contenido">
+
+    <div class="footer-marca">
+      <h2>TecnoCrazy</h2>
+      <p>Tecnología, reparación y desarrollo web</p>
+    </div>
+
+    <div class="footer-columnas">
+      <nav aria-label="Navegación del pie de página">
+        <h3>Navegación</h3>
+        <a href="index.html">Inicio</a>
+        <a href="pages/productos.html">Productos</a>
+        <a href="pages/proyectos.html">Proyectos</a>
+        <a href="pages/sobremi.html">Sobre mí</a>
+        <a href="pages/contacto.html">Contacto</a>
+      </nav>
+
+
+      <div>
+        <h3>Servicios</h3>
+        <p>Reparación de celulares</p>
+        <p>Accesorios tecnológicos</p>
+        <p>Desarrollo web</p>
+      </div>
+    </div>
+
+    <div class="footer-redes">
+      <h3>Seguinos</h3>
+
+      <a href="https://www.instagram.com/pablo.cepeda.1"
+         target="_blank" rel="noopener noreferrer">
+        Instagram
+      </a>
+
+      <a href="https://www.facebook.com/share/1C5ujETJi9/"
+         target="_blank" rel="noopener noreferrer">
+        Facebook
+      </a>
+
+      <a href="https://www.tiktok.com/@cepeda.pablo"
+      target="_blank"
+       rel="noopener noreferrer">
+       TikTok
+       </a>
+
+      <a class="footer-whatsapp"
+         href="https://wa.me/543424067140"
+         target="_blank" rel="noopener noreferrer">
+        Contactanos por WhatsApp
+      </a>
+    </div>
+
+    <p class="footer-copyright">
+      © 2026 TecnoCrazy · Pablo Cepeda
+    </p>
+
+  </div>
+</footer>
+
 
 </div>
     <!-- Bootstrap -->

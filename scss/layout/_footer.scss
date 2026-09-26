@@ -69,3 +69,123 @@ footer {
         width: 100%;
     }
 }
+
+
+/* Footer responsive */
+
+.footer-responsive {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+
+  /* Ocultar el footer basado en imagen */
+  .piepagina.footer-grafico {
+    display: none;
+  }
+
+  .footer-responsive {
+    display: block;
+    width: 100%;
+    padding: 36px 20px 20px;
+    background: #262626;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .footer-marca {
+    text-align: center;
+    margin-bottom: 28px;
+
+    h2 {
+      color: #ffffff;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    p {
+      color: #d1d5db;
+      font-size: 0.9rem;
+    }
+  }
+
+  .footer-columnas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 30px;
+
+    h3 {
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    a, p {
+      display: block;
+      color: #d1d5db;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      color: #1f66ff;
+    }
+  }
+
+  .footer-redes {
+    border-top: 1px solid #555;
+    padding-top: 24px;
+    text-align: center;
+
+    h3 {
+      color: #ffffff;
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
+
+    > a:not(.footer-whatsapp) {
+      display: inline-block;
+      color: #ffffff;
+      margin: 0 8px 15px;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    .footer-whatsapp {
+      display: block;
+      max-width: 320px;
+      margin: 10px auto 0;
+      padding: 12px;
+      border-radius: 8px;
+      background: #198754;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+
+  .footer-copyright {
+    margin: 28px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid #555;
+    color: #d1d5db;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 359px) {
+  .footer-columnas {
+    grid-template-columns: 1fr;
+  }
+}

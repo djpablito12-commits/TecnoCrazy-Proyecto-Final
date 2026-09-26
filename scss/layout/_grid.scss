@@ -5,6 +5,7 @@
    GRID PRINCIPAL
 ===================================== */
 
+
 .bigcontainer {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -12,12 +13,13 @@
         "header"
         "main"
         "footer";
-    gap: 2rem;
+    gap: 0.75rem;
 }
 
 .encabezado {
     grid-area: header;
 }
+
 
 .contenedormain {
     grid-area: main;
@@ -25,7 +27,23 @@
     flex-direction: column;
     align-items: center;
     min-width: 0;
+    width: 100%;
+    gap: 0;
+
+    /* Secciones de accesorios y repuestos */
+    > section:not(.carrusel-ofertas):not(.main-programacion) {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto 1.5rem;
+    }
+
+    /* Títulos de las secciones */
+    > section:not(.carrusel-ofertas):not(.main-programacion) > h2 {
+        margin: 0 0 1rem;
+        text-align: center;
+    }
 }
+
 
 /* ====================================
    CONTENIDO PRINCIPAL
@@ -53,7 +71,7 @@
 /*
    En Productos, .main2 y .main3 también
    tienen la clase .row de Bootstrap.
-   Dejamos que Bootstrap controle las columnas.
+   
 */
 
 .main2.row,
@@ -66,8 +84,8 @@
 }
 
 /*
-   Conservamos CSS Grid para cualquier otra
-   sección que utilice estas clases sin .row.
+   CSS Grid para las secciones
+   
 */
 
 .main2:not(.row),
@@ -79,24 +97,65 @@
 }
 
 /* ====================================
-   PROGRAMACIÓN
+   PROGRAMACIÓN Y SOLUCIONES WEB
 ===================================== */
 
 .main-programacion {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: $gap-medium;
+
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px;
+    min-width: 0;
+
+    margin: 2rem auto;
     padding: 2rem;
+
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $gap-medium;
+
+        width: 100%;
+        min-width: 0;
+    }
+
+    h2 {
+        width: 100%;
+        margin: 0;
+
+        color: #333333;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    figure {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
 }
 
 /* ====================================
-   TABLET
+   TABLETS
 ===================================== */
 
 @media (min-width: 768px) {
+
     .main1 {
         flex-direction: row;
         justify-content: center;
@@ -109,17 +168,53 @@
 }
 
 /* ====================================
-   COMPUTADORA
+   COMPUTADORAS
 ===================================== */
 
 @media (min-width: 1024px) {
+
     .main2:not(.row),
     .main3:not(.row) {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+}
+
+/* ====================================
+   PROGRAMACIÓN RESPONSIVE
+===================================== */
+
+@media (max-width: 767px) {
 
     .main-programacion {
-        flex-direction: row;
-        justify-content: center;
+        width: 95%;
+        margin: 1.5rem auto;
+        padding: 1rem;
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        figure {
+            max-width: 100%;
+        }
+
+        img {
+            border-radius: 6px;
+        }
     }
+}
+
+
+
+/* ESPACIADO DE SECCIONES DEL INICIO */
+
+.contenedormain > section:not(.carrusel-ofertas):not(.main-programacion) {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 1.5rem;
+}
+
+.contenedormain > section:not(.carrusel-ofertas):not(.main-programacion) > h2 {
+    text-align: center;
+    margin: 0 0 1rem;
 }

@@ -284,6 +284,107 @@ footer {
     width: 100%;
   }
 }
+/* Footer responsive */
+.footer-responsive {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  /* Ocultar el footer basado en imagen */
+  .piepagina.footer-grafico {
+    display: none;
+  }
+  .footer-responsive {
+    display: block;
+    width: 100%;
+    padding: 36px 20px 20px;
+    background: #262626;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+  }
+  .footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .footer-marca {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .footer-marca h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .footer-marca p {
+    color: #d1d5db;
+    font-size: 0.9rem;
+  }
+  .footer-columnas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 30px;
+  }
+  .footer-columnas h3 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .footer-columnas a, .footer-columnas p {
+    display: block;
+    color: #d1d5db;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+  .footer-columnas a:hover {
+    color: #1f66ff;
+  }
+  .footer-redes {
+    border-top: 1px solid #555;
+    padding-top: 24px;
+    text-align: center;
+  }
+  .footer-redes h3 {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+  .footer-redes > a:not(.footer-whatsapp) {
+    display: inline-block;
+    color: #ffffff;
+    margin: 0 8px 15px;
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+  .footer-redes .footer-whatsapp {
+    display: block;
+    max-width: 320px;
+    margin: 10px auto 0;
+    padding: 12px;
+    border-radius: 8px;
+    background: #198754;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .footer-copyright {
+    margin: 28px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid #555;
+    color: #d1d5db;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
+@media (max-width: 359px) {
+  .footer-columnas {
+    grid-template-columns: 1fr;
+  }
+}
 /* ====================================
    GRID PRINCIPAL
 ===================================== */
@@ -291,7 +392,7 @@ footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-areas: "header" "main" "footer";
-  gap: 2rem;
+  gap: 0.75rem;
 }
 
 .encabezado {
@@ -304,6 +405,21 @@ footer {
   flex-direction: column;
   align-items: center;
   min-width: 0;
+  width: 100%;
+  gap: 0;
+  /* Secciones de accesorios y repuestos */
+}
+.contenedormain > section:not(.carrusel-ofertas):not(.main-programacion) {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 1.5rem;
+}
+.contenedormain {
+  /* Títulos de las secciones */
+}
+.contenedormain > section:not(.carrusel-ofertas):not(.main-programacion) > h2 {
+  margin: 0 0 1rem;
+  text-align: center;
 }
 
 /* ====================================
@@ -330,7 +446,7 @@ footer {
 /*
    En Productos, .main2 y .main3 también
    tienen la clase .row de Bootstrap.
-   Dejamos que Bootstrap controle las columnas.
+
 */
 .main2.row,
 .main3.row {
@@ -342,8 +458,8 @@ footer {
 }
 
 /*
-   Conservamos CSS Grid para cualquier otra
-   sección que utilice estas clases sin .row.
+   CSS Grid para las secciones
+
 */
 .main2:not(.row),
 .main3:not(.row) {
@@ -354,20 +470,51 @@ footer {
 }
 
 /* ====================================
-   PROGRAMACIÓN
+   PROGRAMACIÓN Y SOLUCIONES WEB
 ===================================== */
 .main-programacion {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 0;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+.main-programacion article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
   width: 100%;
-  max-width: 900px;
-  padding: 2rem;
+  min-width: 0;
+}
+.main-programacion h2 {
+  width: 100%;
+  margin: 0;
+  color: #333333;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.main-programacion figure {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0;
+}
+.main-programacion img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 /* ====================================
-   TABLET
+   TABLETS
 ===================================== */
 @media (min-width: 768px) {
   .main1 {
@@ -380,18 +527,45 @@ footer {
   }
 }
 /* ====================================
-   COMPUTADORA
+   COMPUTADORAS
 ===================================== */
 @media (min-width: 1024px) {
   .main2:not(.row),
   .main3:not(.row) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+/* ====================================
+   PROGRAMACIÓN RESPONSIVE
+===================================== */
+@media (max-width: 767px) {
   .main-programacion {
-    flex-direction: row;
-    justify-content: center;
+    width: 95%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+  }
+  .main-programacion h2 {
+    font-size: 1.4rem;
+  }
+  .main-programacion figure {
+    max-width: 100%;
+  }
+  .main-programacion img {
+    border-radius: 6px;
   }
 }
+/* ESPACIADO DE SECCIONES DEL INICIO */
+.contenedormain > section:not(.carrusel-ofertas):not(.main-programacion) {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 1.5rem;
+}
+
+.contenedormain > section:not(.carrusel-ofertas):not(.main-programacion) > h2 {
+  text-align: center;
+  margin: 0 0 1rem;
+}
+
 .btn, .btn-secondary, .btn-primary {
   padding: 0.8rem 2rem;
   border: none;
@@ -566,6 +740,76 @@ MEDIA QUERY DESKTOP
   color: #FFFFFF;
   line-height: 1.6;
   margin: 1rem 0 1.5rem;
+}
+
+/* ====================================
+   CARRUSEL DE OFERTAS TECNOCRAZY
+===================================== */
+.carrusel-ofertas {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto 0.5rem;
+  padding: 0 8px;
+}
+.carrusel-ofertas .carousel {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.carrusel-ofertas .carousel-inner,
+.carrusel-ofertas .carousel-item {
+  width: 100%;
+}
+.carrusel-ofertas .carousel-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.carrusel-ofertas .carousel-control-prev,
+.carrusel-ofertas .carousel-control-next {
+  width: 6%;
+}
+.carrusel-ofertas .carousel-indicators {
+  margin-bottom: 5px;
+}
+
+/* ====================================
+   TABLETS
+===================================== */
+@media (max-width: 991px) {
+  .carrusel-ofertas {
+    padding: 0 5px;
+    margin-bottom: 0.5rem;
+  }
+  .carrusel-ofertas .carousel {
+    border-radius: 6px;
+  }
+}
+/* ====================================
+   CELULARES
+===================================== */
+@media (max-width: 575px) {
+  .carrusel-ofertas {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0.25rem;
+  }
+  .carrusel-ofertas .carousel {
+    border-radius: 0;
+  }
+  .carrusel-ofertas .carousel-item img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .carrusel-ofertas .carousel-control-prev,
+  .carrusel-ofertas .carousel-control-next {
+    width: 10%;
+  }
+  .carrusel-ofertas .carousel-indicators {
+    margin-bottom: 4px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
