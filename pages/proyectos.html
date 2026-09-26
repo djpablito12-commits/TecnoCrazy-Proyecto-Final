@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Conocé los proyectos y servicios de TecnoCrazy: desarrollo web, soluciones digitales y reparación de dispositivos tecnológicos.">
+        content="Conocé los proyectos y servicios de TecnoCrazy, el portafolio de Pablo Cepeda, desarrollo web y reparación de dispositivos tecnológicos.">
 
     <meta name="keywords"
-        content="proyectos tecnológicos, desarrollo web, páginas web, soluciones digitales, reparación de dispositivos, Full Stack, TecnoCrazy">
+        content="TecnoCrazy, Pablo Cepeda, portafolio web, proyectos tecnológicos, desarrollo web, páginas web, reparación de dispositivos">
 
-    <title>Proyectos y servicios tecnológicos | TecnoCrazy</title>
+    <title>Proyectos, servicios y portafolio web | TecnoCrazy</title>
 
     <!-- Google Fonts -->
     <link
@@ -32,6 +32,117 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/style.css">
 
+    <!-- Estilos exclusivos de la tarjeta del portafolio -->
+    <style>
+        .seccion-portafolio {
+            padding: 45px 0;
+        }
+
+        .tarjeta-portafolio {
+            max-width: 900px;
+            margin: 25px auto;
+            overflow: hidden;
+            border: 1px solid #dce4f0;
+            border-radius: 18px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tarjeta-portafolio:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(31, 102, 255, 0.18);
+        }
+
+        .imagen-portafolio {
+            width: 100%;
+            height: 100%;
+            min-height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .contenido-portafolio {
+            padding: 35px;
+            text-align: left;
+        }
+
+        .etiqueta-portafolio {
+            display: inline-block;
+            padding: 7px 14px;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            background-color: #eaf1ff;
+            color: #1F66FF;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .contenido-portafolio h3 {
+            margin-bottom: 15px;
+            color: #262626;
+            font-weight: 700;
+        }
+
+        .contenido-portafolio p {
+            margin-bottom: 20px;
+            color: #333333;
+            line-height: 1.7;
+        }
+
+        .tecnologias-portafolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .tecnologias-portafolio span {
+            padding: 6px 12px;
+            border-radius: 6px;
+            background-color: #F2F2F2;
+            color: #333333;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .boton-portafolio {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 8px;
+            background-color: #1F66FF;
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .boton-portafolio:hover {
+            background-color: #174ec5;
+            color: #ffffff;
+        }
+
+        @media (max-width: 767px) {
+            .seccion-portafolio {
+                padding: 30px 0;
+            }
+
+            .imagen-portafolio {
+                height: 230px;
+                min-height: 0;
+            }
+
+            .contenido-portafolio {
+                padding: 25px 20px;
+                text-align: center;
+            }
+
+            .tecnologias-portafolio {
+                justify-content: center;
+            }
+        }
+    </style>
+
     <link
         rel="canonical"
         href="https://tecno-crazy-proyecto-final-28z3.vercel.app/pages/proyectos.html">
@@ -46,6 +157,7 @@
 
             <!-- NAVBAR -->
             <nav class="navbar navbar-expand-lg navbar-dark">
+
                 <div class="container-fluid">
 
                     <a class="navbar-brand" href="../index.html">
@@ -72,15 +184,11 @@
 
                         <div class="navbar-nav ms-auto menu-nav">
 
-                            <a
-                                class="nav-link"
-                                href="../index.html">
+                            <a class="nav-link" href="../index.html">
                                 Inicio
                             </a>
 
-                            <a
-                                class="nav-link"
-                                href="productos.html">
+                            <a class="nav-link" href="productos.html">
                                 Productos
                             </a>
 
@@ -91,15 +199,11 @@
                                 Proyectos
                             </a>
 
-                            <a
-                                class="nav-link"
-                                href="contacto.html">
+                            <a class="nav-link" href="contacto.html">
                                 Contacto
                             </a>
 
-                            <a
-                                class="nav-link"
-                                href="sobremi.html">
+                            <a class="nav-link" href="sobremi.html">
                                 Sobre mí
                             </a>
 
@@ -164,6 +268,89 @@
 
                 </section>
 
+
+                <!-- NUEVA SECCIÓN: MI PORTAFOLIO WEB -->
+                <section
+                    class="seccion-portafolio"
+                    aria-labelledby="titulo-portafolio">
+
+                    <h2
+                        id="titulo-portafolio"
+                        data-aos="fade-up">
+                        Mi portafolio web
+                    </h2>
+
+                    <div
+                        class="tarjeta-portafolio"
+                        data-aos="fade-up">
+
+                        <div class="row g-0 align-items-stretch">
+
+                            <!-- IMAGEN -->
+                            <div class="col-md-5">
+
+                                <img
+                                    src="../assets/tecnocrazy-banner.jpg"
+                                    class="imagen-portafolio"
+                                    alt="Proyecto TecnoCrazy de Pablo Cepeda"
+                                    loading="lazy">
+
+                            </div>
+
+                            <!-- INFORMACIÓN -->
+                            <div class="col-md-7">
+
+                                <div class="contenido-portafolio">
+
+                                    <span class="etiqueta-portafolio">
+                                        Desarrollo web
+                                    </span>
+
+                                    <h3>
+                                        Pablo Cepeda | Mi portafolio
+                                    </h3>
+
+                                    <p>
+                                        Soy desarrollador web en formación
+                                        y creador de TecnoCrazy.
+                                        Te invito a conocer mis proyectos,
+                                        las tecnologías que utilizo
+                                        y los sitios web que voy creando.
+                                    </p>
+
+                                    <div
+                                        class="tecnologias-portafolio"
+                                        aria-label="Tecnologías utilizadas">
+
+                                        <span>HTML5</span>
+                                        <span>CSS3</span>
+                                        <span>SCSS</span>
+                                        <span>Bootstrap</span>
+                                        <span>GitHub</span>
+
+                                    </div>
+
+                                    <a
+                                        class="boton-portafolio"
+                                        href="https://github.com/djpablito12-commits/TecnoCrazy-Proyecto-Final"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+
+                                        Ver mis proyectos ↗
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
                 <!-- COMENTARIOS -->
                 <section>
 
@@ -204,6 +391,7 @@
 
                         </div>
 
+
                         <!-- SOFÍA -->
                         <div class="col-lg-4 col-md-6 col-sm-12">
 
@@ -234,6 +422,7 @@
                             </article>
 
                         </div>
+
 
                         <!-- MAURO -->
                         <div class="col-lg-4 col-md-6 col-sm-12">
@@ -266,6 +455,7 @@
 
                         </div>
 
+
                         <!-- FLORENCIA -->
                         <div class="col-lg-6 col-md-6 col-sm-12">
 
@@ -293,6 +483,7 @@
                             </article>
 
                         </div>
+
 
                         <!-- PAZ -->
                         <div class="col-lg-6 col-md-6 col-sm-12">
@@ -332,6 +523,7 @@
             </div>
 
         </main>
+
 
         <!-- FOOTER GRÁFICO -->
         <footer
@@ -382,6 +574,7 @@
 
                 </nav>
 
+
                 <!-- REDES SOCIALES -->
                 <div
                     class="footer-hotspots footer-social-hotspots"
@@ -421,6 +614,7 @@
 
                 </div>
 
+
                 <!-- VOLVER ARRIBA -->
                 <a
                     class="hotspot volver-arriba-grafico"
@@ -431,6 +625,7 @@
             </div>
 
         </footer>
+
 
         <!-- FOOTER RESPONSIVE -->
         <footer class="footer-responsive">
@@ -446,6 +641,7 @@
                     </p>
 
                 </div>
+
 
                 <div class="footer-columnas">
 
@@ -465,6 +661,7 @@
 
                     </nav>
 
+
                     <div>
 
                         <h3>Servicios</h3>
@@ -478,6 +675,7 @@
                     </div>
 
                 </div>
+
 
                 <div class="footer-redes">
 
@@ -514,6 +712,7 @@
 
                 </div>
 
+
                 <p class="footer-copyright">
                     © 2026 TecnoCrazy · Pablo Cepeda
                 </p>
@@ -525,11 +724,11 @@
     </div>
     <!-- FIN DE BIGCONTAINER -->
 
-   
-<!-- Bootstrap JS -->
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-</script>
+
+    <!-- BOOTSTRAP JS: MENÚ HAMBURGUESA CORREGIDO -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
 
 
     <!-- AOS -->
